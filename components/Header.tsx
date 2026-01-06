@@ -11,7 +11,7 @@ const Header: React.FC = () => {
           <div className="flex size-10 items-center justify-center border-2 border-primary text-primary bg-background hover:bg-primary hover:text-background transition-colors duration-300">
             <i className="fa-solid fa-gem text-xl"></i>
           </div>
-          <h2 className="text-xl font-bold font-sans leading-snug tracking-tight text-text">[公司名稱]</h2>
+          <h2 className="text-xl font-bold font-sans leading-snug tracking-tight text-text">i-design</h2>
         </div>
 
         {/* Desktop Nav */}

@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
           <i className="fa-solid fa-quote-left mb-12 text-7xl text-primary/30"></i>
           <blockquote className="mb-12">
             <p className="text-3xl font-medium leading-relaxed text-text sm:text-4xl lg:text-5xl">
-              "自從與 [公司名稱] 合作後，我們的數位存在獲得了顯著提升，官網詢價量在三個月內成長 200%。他們不僅具備卓越技術，更深刻理解我們的商業目標！"
+              "自從與 i-design 合作後，我們的數位存在獲得了顯著提升，官網詢價量在三個月內成長 200%。他們不僅具備卓越技術，更深刻理解我們的商業目標！"
             </p>
           </blockquote>
           <div className="flex items-center gap-6">

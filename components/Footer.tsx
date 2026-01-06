@@ -17,15 +17,15 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-20 flex flex-col items-center gap-4 text-base text-muted sm:flex-row sm:justify-center sm:gap-10">
           <span className="flex items-center gap-3">
-            <i className="fa-regular fa-envelope text-xl text-primary"></i> contact@company.com
+            <i className="fa-regular fa-envelope text-xl text-primary"></i> idesign.app2026@gmail.com
           </span>
           <span className="hidden sm:inline text-muted">|</span>
           <span className="flex items-center gap-3">
-            <i className="fa-solid fa-phone-alt text-xl text-primary"></i> 02-1234-5678
+            <i className="fa-solid fa-phone-alt text-xl text-primary"></i> 0988-968172
           </span>
         </div>
         <div className="mt-12 text-sm text-muted/30">
-            © {new Date().getFullYear()} [公司名稱]. All Rights Reserved. Designed with Brutalist Aesthetics.
+            © {new Date().getFullYear()} i-design. All Rights Reserved. Designed with Brutalist Aesthetics.
         </div>
       </div>
     </section>

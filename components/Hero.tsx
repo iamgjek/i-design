@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
               <span className="text-primary">昇華為非凡的數位遺產。</span>
             </h1>
             <p className="text-xl font-normal leading-relaxed text-muted sm:text-2xl max-w-3xl mx-auto lg:mx-0">
-              我們是 [公司名稱]，以精湛工藝和策略遠見，為您的品牌雕塑獨一無二的數位存在。透過頂級設計、堅實架構與精準策略，我們將潛在客戶轉化為忠實擁護者。
+              我們是 i-design，以精湛工藝和策略遠見，為您的品牌雕塑獨一無二的數位存在。透過頂級設計、堅實架構與精準策略，我們將潛在客戶轉化為忠實擁護者。
             </p>
             <div className="flex justify-center lg:justify-start">
               <a href="#contact" className="group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">

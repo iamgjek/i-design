@@ -6,7 +6,7 @@ const WhyUs: React.FC = () => {
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-20 text-center">
           <h2 className="text-4xl font-bold leading-snug text-text sm:text-5xl">
-            <span className="text-primary">選擇 [公司名稱]</span>，因為我們專注於您的卓越成果。
+            <span className="text-primary">選擇 i-design</span>，因為我們專注於您的卓越成果。
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
