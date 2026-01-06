@@ -2,7 +2,7 @@ import React from 'react';
 
 const painPoints = [
   {
-    icon: "fa-sparkles",
+    icon: "fa-anchor-circle-exclamation",
     title: "陳舊的品牌形象",
     desc: "網站未能體現品牌精髓，設計過時，無法吸引高端客戶的目光，阻礙品牌價值傳遞。"
   },
