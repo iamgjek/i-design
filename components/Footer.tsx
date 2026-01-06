@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           </span>
         </div>
         <div className="mt-12 text-sm text-muted/30">
-            © {new Date().getFullYear()} i-design. All Rights Reserved. Designed with Brutalist Aesthetics.
+            © {new Date().getFullYear()} i-design. All Rights Reserved.
         </div>
       </div>
     </section>

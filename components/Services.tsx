@@ -23,7 +23,7 @@ const services = [
     icon: "fa-chart-line",
     title: "策略性 SEO 顧問",
     desc: "運用尖端策略，提升品牌在數位世界的可見性，確保高價值客戶能主動發現您。",
-    list: ["獨家關鍵字策略佈局", "深度技術 SEO 優化 (Technical SEO)", "權威內容行銷指導"]
+    list: ["獨家關鍵字策略佈局", "深度技術 SEO 優化 (AEO)", "權威內容行銷指導"]
   }
 ];
 
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-20 text-center">
           <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-snug text-text sm:text-5xl" style={{ lineHeight: '58px' }}>
-            我們提供<span className="text-secondary">精雕細琢的數位解決方案</span>，為您的品牌賦能
+            我們提供<span className="text-secondary">精雕細琢的數位解決方案</span><br/>為您的品牌賦能
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

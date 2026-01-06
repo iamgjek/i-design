@@ -32,7 +32,7 @@ const PainPoints: React.FC = () => {
             您的品牌是否面臨<span className="text-primary">數位轉型瓶頸</span>？
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto leading-relaxed">
-            我們提供超越期待的 bespoke 解決方案，助您克服挑戰，開創數位新紀元。
+            我們提供超越期待的客製化數位解決方案，助您克服挑戰，開創數位新紀元
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

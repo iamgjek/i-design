@@ -17,9 +17,9 @@ const Hero: React.FC = () => {
       <div className="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           <div className="flex flex-1 flex-col gap-8 text-center lg:text-left">
-            <h1 className="text-5xl font-extrabold leading-snug tracking-tight text-text sm:text-6xl lg:text-7xl">
-              將您的願景，<br className="hidden lg:block" />
-              <span className="text-primary">昇華為非凡的數位遺產。</span>
+            <h1 className="text-5xl font-extrabold leading-[92px] tracking-tight text-text sm:text-6xl lg:text-7xl">
+              將您的願景<br className="hidden lg:block" />
+              <span className="text-primary">昇華為非凡的數位遺產</span>
             </h1>
             <p className="text-xl font-normal leading-relaxed text-muted sm:text-2xl max-w-3xl mx-auto lg:mx-0">
               我們是 i-design，以精湛工藝和策略遠見，為您的品牌雕塑獨一無二的數位存在。透過頂級設計、堅實架構與精準策略，我們將潛在客戶轉化為忠實擁護者。
