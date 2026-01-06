@@ -32,7 +32,7 @@ const Services: React.FC = () => {
     <section id="services" className="bg-background py-24 border-b-2 border-border">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-20 text-center">
-          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-snug text-text sm:text-5xl">
+          <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-snug text-text sm:text-5xl" style={{ lineHeight: '58px' }}>
             我們提供<span className="text-secondary">精雕細琢的數位解決方案</span>，為您的品牌賦能
           </h2>
         </div>
