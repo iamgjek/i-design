@@ -10,6 +10,7 @@ const ContactForm: React.FC = () => {
     description: ''
   });
   const [status, setStatus] = useState<FormStatus>(FormStatus.IDLE);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,14 +19,16 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(FormStatus.SUBMITTING);
+    setErrorMessage('');
     
     try {
       await submitContactForm(formData);
       setStatus(FormStatus.SUCCESS);
       setFormData({ name: '', email: '', service: '網頁設計與開發', description: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
       setStatus(FormStatus.ERROR);
+      setErrorMessage(error?.message || '提交失敗，請稍後再試或直接聯繫我們。');
     }
   };
 
@@ -107,8 +110,17 @@ const ContactForm: React.FC = () => {
             </div>
             
             {status === FormStatus.ERROR && (
-              <div className="text-secondary font-bold text-center">
-                提交失敗，請稍後再試或直接聯繫我們。
+              <div className="border-2 border-secondary bg-background/50 p-6 text-secondary">
+                <div className="font-bold text-lg mb-2">
+                  <i className="fa-solid fa-exclamation-triangle mr-2"></i>
+                  提交失敗
+                </div>
+                <div className="text-sm whitespace-pre-line">
+                  {errorMessage}
+                </div>
+                <div className="mt-4 text-xs text-muted">
+                  提示：請確保已運行 API 伺服器（<code className="bg-surface px-2 py-1">npm run server</code> 或 <code className="bg-surface px-2 py-1">npm run dev:all</code>）
+                </div>
               </div>
             )}
 
