@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
           <h2 className="text-3xl font-bold leading-snug text-text sm:text-4xl">
             啟動您的<span className="text-primary">數位轉型</span>
           </h2>
-          <p className="mt-4 text-lg text-muted leading-relaxed">填寫下方表格，我們將在 24 小時內與您聯繫。</p>
+          <p className="mt-4 text-lg text-muted leading-relaxed">填寫下方表格，我們將在 24 小時內與您聯繫</p>
         </div>
 
         {status === FormStatus.SUCCESS ? (
