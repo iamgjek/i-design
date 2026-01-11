@@ -32,10 +32,10 @@ const Header: React.FC = () => {
 
         {/* Language Switcher & CTA Button */}
         <div className="hidden md:flex items-center gap-4 justify-end">
-          <LanguageSwitcher />
           <a href="#contact" className="flex h-12 cursor-pointer items-center justify-center border-2 border-primary px-6 text-base font-bold text-primary transition hover:bg-primary hover:text-background">
             {t('header.contact')}
           </a>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Menu Button */}
@@ -53,10 +53,10 @@ const Header: React.FC = () => {
            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.services')}</a>
            <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.whyUs')}</a>
            <a href="#cases" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.cases')}</a>
+           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold">{t('header.contact')}</a>
            <div className="mt-2">
              <LanguageSwitcher />
            </div>
-           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold">{t('header.contact')}</a>
         </div>
       )}
     </header>
