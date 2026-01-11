@@ -101,28 +101,28 @@ const SEO: React.FC = () => {
 
     jsonLdScript.textContent = JSON.stringify(structuredData);
 
-    // 更新 canonical URL（如果需要語言特定的 URL）
+    // 更新 canonical URL
+    // 對於 SPA，所有語言版本都使用同一個 URL
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    // 可以根據語言設置不同的 canonical URL
     const baseUrl = 'https://i-design.com';
-    const langPath = i18n.language === 'zh-TW' ? '' : `/${i18n.language}`;
-    canonicalLink.setAttribute('href', `${baseUrl}${langPath}/`);
+    // 所有語言版本都指向同一個 URL（因為這是 SPA）
+    canonicalLink.setAttribute('href', `${baseUrl}/`);
 
     // 更新 alternate hreflang 標籤
+    // 對於 SPA，所有語言版本都使用同一個 URL，但標示不同的語言
     const languages = ['zh-TW', 'en', 'zh-CN'];
+    const hreflangMap: { [key: string]: string } = {
+      'zh-TW': 'zh-Hant',
+      'zh-CN': 'zh-Hans',
+      'en': 'en'
+    };
+    
     languages.forEach((lang) => {
-      const hreflangMap: { [key: string]: string } = {
-        'zh-TW': 'zh-Hant',
-        'zh-CN': 'zh-Hans',
-        'en': 'en'
-      };
-      const langPath = lang === 'zh-TW' ? '' : `/${lang}`;
-      
       let hreflangLink = document.querySelector(`link[rel="alternate"][hreflang="${hreflangMap[lang]}"]`);
       if (!hreflangLink) {
         hreflangLink = document.createElement('link');
@@ -130,7 +130,8 @@ const SEO: React.FC = () => {
         hreflangLink.setAttribute('hreflang', hreflangMap[lang]);
         document.head.appendChild(hreflangLink);
       }
-      hreflangLink.setAttribute('href', `${baseUrl}${langPath}/`);
+      // 所有語言版本都指向同一個 URL
+      hreflangLink.setAttribute('href', `${baseUrl}/`);
     });
 
     // 添加 x-default hreflang
