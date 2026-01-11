@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
           <div className="flex size-10 items-center justify-center border-2 border-primary text-primary bg-background hover:bg-primary hover:text-background transition-colors duration-300">
-            <i className="fa-solid fa-gem text-xl"></i>
+            <img src="/logo.svg" alt="i-design logo" className="w-full h-full object-contain p-1" />
           </div>
           <h2 className="text-xl font-bold font-sans leading-snug tracking-tight text-text">i-design</h2>
         </div>
