@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -17,20 +20,21 @@ const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex flex-1 justify-center gap-12">
           <a href="#services" className="text-base font-medium text-muted hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-2">
-            專屬服務
+            {t('header.services')}
           </a>
           <a href="#why-us" className="text-base font-medium text-muted hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-2">
-            我們的承諾
+            {t('header.whyUs')}
           </a>
           <a href="#cases" className="text-base font-medium text-muted hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-2">
-            精選案例
+            {t('header.cases')}
           </a>
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex justify-end">
+        {/* Language Switcher & CTA Button */}
+        <div className="hidden md:flex items-center gap-4 justify-end">
+          <LanguageSwitcher />
           <a href="#contact" className="flex h-12 cursor-pointer items-center justify-center border-2 border-primary px-6 text-base font-bold text-primary transition hover:bg-primary hover:text-background">
-            預約諮詢
+            {t('header.contact')}
           </a>
         </div>
 
@@ -46,10 +50,13 @@ const Header: React.FC = () => {
       {/* Mobile Nav Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-b-2 border-border p-6 flex flex-col gap-4 absolute w-full">
-           <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">專屬服務</a>
-           <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">我們的承諾</a>
-           <a href="#cases" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">精選案例</a>
-           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold">預約諮詢</a>
+           <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.services')}</a>
+           <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.whyUs')}</a>
+           <a href="#cases" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted hover:text-primary">{t('header.cases')}</a>
+           <div className="mt-2">
+             <LanguageSwitcher />
+           </div>
+           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold">{t('header.contact')}</a>
         </div>
       )}
     </header>

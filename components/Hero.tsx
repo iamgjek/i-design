@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative overflow-hidden py-24 lg:py-40 border-b-2 border-border">
       {/* Background Image with Overlay */}
@@ -18,17 +21,21 @@ const Hero: React.FC = () => {
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
           <div className="flex flex-1 flex-col gap-8 text-center lg:text-left">
             <h1 className="text-5xl font-extrabold leading-[64px] lg:leading-[92px] tracking-tight text-text sm:text-6xl lg:text-7xl">
-              將您的願景<br className="hidden lg:block" />
-              <span className="text-primary">淬鍊為非凡的數位資產</span>
+              {t('hero.title')}<br className="hidden lg:block" />
+              <span className="text-primary">{t('hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl font-normal leading-relaxed text-muted sm:text-2xl max-w-3xl mx-auto lg:mx-0">
-            i-design 以設計工藝與策略思維並行，為品牌構築獨一無二、具長期價值的數位存在。<br/>
-            從視覺到架構，從體驗到成長策略，我們協助品牌在數位世界中，留下真正值得傳承的印記。
+              {t('hero.description').split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < t('hero.description').split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </p>
             <div className="flex justify-center lg:justify-start">
               <a href="#contact" className="group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">
                 <i className="fa-solid fa-arrow-right mr-3 group-hover:translate-x-1 transition-transform"></i> 
-                探索您的專屬解決方案
+                {t('hero.cta')}
               </a>
             </div>
           </div>

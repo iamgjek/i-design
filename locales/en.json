@@ -1,0 +1,177 @@
+{
+  "header": {
+    "services": "Services",
+    "whyUs": "Why Us",
+    "cases": "Cases",
+    "contact": "Book Consultation",
+    "switchLanguage": "Switch Language"
+  },
+  "hero": {
+    "title": "Transform Your Vision",
+    "titleHighlight": "Into Extraordinary Digital Assets",
+    "description": "i-design combines design craftsmanship with strategic thinking to build unique, long-term value digital presence for brands.\nFrom visual to architecture, from experience to growth strategy, we help brands leave truly memorable marks in the digital world.",
+    "cta": "Explore Your Custom Solution"
+  },
+  "painPoints": {
+    "title": "Is Your Brand Facing",
+    "titleHighlight": "Digital Transformation Challenges",
+    "subtitle": "We provide exceptional customized digital solutions to help you overcome challenges and usher in a new digital era",
+    "items": {
+      "outdated": {
+        "title": "Outdated Brand Image",
+        "desc": "The website fails to reflect the brand essence, with outdated design that cannot attract high-end clients, hindering brand value delivery."
+      },
+      "performance": {
+        "title": "System Performance Lag",
+        "desc": "Slow loading speeds and unresponsive operations severely damage user experience, leading to potential client loss."
+      },
+      "visibility": {
+        "title": "Insufficient Search Visibility",
+        "desc": "Even with excellent products or services, brands struggle to stand out in search engines, missing market opportunities."
+      },
+      "partner": {
+        "title": "Lack of Professional Strategic Partner",
+        "desc": "Difficulty finding a digital partner who truly understands business goals and can provide top-tier technology and strategic integration."
+      }
+    }
+  },
+  "services": {
+    "title": "We Provide",
+    "titleHighlight": "Exquisitely Crafted Digital Solutions",
+    "titleSuffix": "To Empower Your Brand",
+    "items": {
+      "design": {
+        "title": "Immersive Web Design",
+        "desc": "Meticulously crafted, perfectly blending artistic aesthetics with business conversion rates to create unforgettable digital experiences.",
+        "list": [
+          "Seamless Responsive Design (RWD)",
+          "Brand Identity System (CIS) Redesign & Enhancement",
+          "High-Conversion Landing Pages"
+        ]
+      },
+      "development": {
+        "title": "Premium Software Engineering",
+        "desc": "Tailored to your unique business model, we create efficient and robust technical solutions to lay the foundation for innovation.",
+        "list": [
+          "Enterprise Management System (ERP/CRM) Customization",
+          "SaaS Products from Concept to Reality",
+          "Complex API Integration & Data Security"
+        ]
+      },
+      "strategy": {
+        "title": "Process & Experience Strategy",
+        "desc": "Deep insights into user needs, optimizing every touchpoint to ensure smooth user flows and impeccable experiences.",
+        "list": [
+          "Precise User Journey Mapping",
+          "Intuitive UI/UX Interface Optimization",
+          "Smart Automation Process Implementation"
+        ]
+      },
+      "seo": {
+        "title": "Strategic SEO Consulting",
+        "desc": "Using cutting-edge strategies to enhance brand visibility in the digital world, ensuring high-value clients can discover you.",
+        "list": [
+          "Exclusive Keyword Strategy Layout",
+          "Deep Technical SEO Optimization (AEO)",
+          "Authoritative Content Marketing Guidance"
+        ]
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Choose i-design",
+    "titleHighlight": "Because We Focus on Your Excellence",
+    "items": {
+      "craftsmanship": {
+        "title": "Exquisite Craftsmanship, Beyond Expectations",
+        "desc": "We treat every project as a work of art, pursuing ultimate detail and quality to present you with unparalleled digital solutions."
+      },
+      "data": {
+        "title": "Data-Driven, Precise Decisions",
+        "desc": "All strategies are based on rigorous data analysis and user insights, ensuring every step is precise and effective, not subjective speculation."
+      },
+      "collaboration": {
+        "title": "Agile Collaboration, Seamless Communication",
+        "desc": "Adopting flexible agile development models to ensure transparent project progress and achieve real-time, efficient communication and collaboration with your team."
+      }
+    }
+  },
+  "testimonials": {
+    "quote": "Since partnering with i-design, our digital presence has significantly improved, with website inquiries increasing by 200% in three months. They not only have excellent technology but also deeply understand our business goals!",
+    "author": "CEO of a Well-Known Traditional Industry Transformation",
+    "role": "Long-term Strategic Partner"
+  },
+  "contact": {
+    "title": "Start Your",
+    "titleHighlight": "Digital Transformation",
+    "subtitle": "Fill out the form below and we will contact you within 24 hours",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "name@company.com",
+      "service": "Consultation Service",
+      "description": "Project Description",
+      "descriptionPlaceholder": "Please briefly describe your needs and goals...",
+      "submit": "Submit Booking Request",
+      "submitting": "Sending...",
+      "success": {
+        "title": "Booking Successful!",
+        "message": "Our team has received your request and will contact you soon.",
+        "newMessage": "Send New Message"
+      },
+      "error": {
+        "title": "Submission Failed",
+        "message": "Submission failed, please try again later or contact us directly.",
+        "hint": "Tip: Please ensure the API server is running (npm run server or npm run dev:all)"
+      }
+    },
+    "services": {
+      "webDesign": "Web Design & Development",
+      "enterprise": "Enterprise Software Solutions",
+      "consulting": "Digital Transformation Consulting",
+      "seo": "SEO & Marketing Strategy"
+    }
+  },
+  "footer": {
+    "title": "Ready to Take Your Brand",
+    "titleHighlight": "To the Peak",
+    "titleSuffix": "?",
+    "subtitle": "Don't miss potential opportunities. Book a free project consultation now, let us deeply listen to your grand vision and create infinite possibilities together.",
+    "cta": "Contact Us Now to Start Your Project",
+    "copyright": "All Rights Reserved."
+  },
+  "seo": {
+    "title": "i-design - Digital Transformation Experts | Web Design, Software Development, SEO Consulting",
+    "description": "We are i-design, crafting unique digital presence for your brand with exquisite craftsmanship and strategic vision. Through premium design, solid architecture, and precise strategies, we transform potential clients into loyal advocates. Offering immersive web design, premium software engineering, process & experience strategy, and strategic SEO consulting services.",
+    "keywords": "web design, digital transformation, software development, SEO optimization, UI/UX design, responsive design, digital marketing, brand design, website development, digital strategy",
+    "ogTitle": "i-design - Digital Transformation Experts | Web Design, Software Development, SEO Consulting",
+    "ogDescription": "We are i-design, crafting unique digital presence for your brand with exquisite craftsmanship and strategic vision. Through premium design, solid architecture, and precise strategies, we transform potential clients into loyal advocates.",
+    "twitterTitle": "i-design - Digital Transformation Experts | Web Design, Software Development, SEO Consulting",
+    "twitterDescription": "We are i-design, crafting unique digital presence for your brand with exquisite craftsmanship and strategic vision. Through premium design, solid architecture, and precise strategies, we transform potential clients into loyal advocates.",
+    "jsonLd": {
+      "name": "i-design",
+      "description": "We are i-design, crafting unique digital presence for your brand with exquisite craftsmanship and strategic vision. Through premium design, solid architecture, and precise strategies, we transform potential clients into loyal advocates.",
+      "serviceType": ["Web Design", "Software Development", "UI/UX Design", "SEO Optimization", "Digital Transformation Consulting"],
+      "catalogName": "Digital Services",
+      "services": [
+        {
+          "name": "Immersive Web Design",
+          "description": "Meticulously crafted, perfectly blending artistic aesthetics with business conversion rates to create unforgettable digital experiences."
+        },
+        {
+          "name": "Premium Software Engineering",
+          "description": "Tailored to your unique business model, we create efficient and robust technical solutions to lay the foundation for innovation."
+        },
+        {
+          "name": "Process & Experience Strategy",
+          "description": "Deep insights into user needs, optimizing every touchpoint to ensure smooth user flows and impeccable experiences."
+        },
+        {
+          "name": "Strategic SEO Consulting",
+          "description": "Using cutting-edge strategies to enhance brand visibility in the digital world, ensuring high-value clients can discover you."
+        }
+      ]
+    }
+  }
+}

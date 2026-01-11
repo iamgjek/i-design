@@ -1,4 +1,6 @@
 import React from 'react';
+import './i18n';
+import SEO from './components/SEO';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PainPoints from './components/PainPoints';
@@ -11,6 +13,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-background text-text font-sans antialiased selection:bg-primary selection:text-background">
+      <SEO />
       <Header />
       <main>
         <Hero />
