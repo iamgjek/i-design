@@ -20,14 +20,16 @@ const LanguageSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full md:w-auto">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 border-2 border-border bg-background text-text hover:border-primary transition-colors"
+        className="w-full md:w-auto flex items-center justify-between gap-2 px-4 py-2 border-2 border-border bg-background text-text hover:border-primary transition-colors"
         aria-label={t('header.switchLanguage')}
       >
-        <span className="text-xl">{currentLanguage.flag}</span>
-        <span className="hidden sm:inline text-sm font-medium">{currentLanguage.label}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xl">{currentLanguage.flag}</span>
+          <span className="text-sm font-medium">{currentLanguage.label}</span>
+        </div>
         <i className={`fa-solid fa-chevron-${isOpen ? 'up' : 'down'} text-xs`}></i>
       </button>
 
@@ -37,7 +39,7 @@ const LanguageSwitcher: React.FC = () => {
             className="fixed inset-0 z-40" 
             onClick={() => setIsOpen(false)}
           ></div>
-          <div className="absolute right-0 mt-2 w-48 bg-background border-2 border-border z-50 shadow-lg">
+          <div className="absolute left-0 right-0 md:right-0 md:left-auto mt-2 w-full md:w-48 bg-background border-2 border-border z-50 shadow-lg">
             {languages.map((lang) => (
               <button
                 key={lang.code}

@@ -15,10 +15,21 @@ const ContactForm: React.FC = () => {
   });
   const [status, setStatus] = useState<FormStatus>(FormStatus.IDLE);
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const [isServiceOpen, setIsServiceOpen] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleServiceSelect = (serviceKey: typeof serviceKeys[number]) => {
+    const serviceValue = t(`contact.services.${serviceKey}`);
+    setFormData({ ...formData, service: serviceValue });
+    setIsServiceOpen(false);
+  };
+
+  const currentServiceKey = serviceKeys.find(
+    key => t(`contact.services.${key}`) === formData.service
+  ) || serviceKeys[0];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,18 +99,42 @@ const ContactForm: React.FC = () => {
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm font-bold text-text uppercase tracking-wider">{t('contact.form.service')}</label>
-              <select 
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none outline-none transition-colors appearance-none cursor-pointer"
-              >
-                {serviceKeys.map((key) => (
-                  <option key={key} value={t(`contact.services.${key}`)}>
-                    {t(`contact.services.${key}`)}
-                  </option>
-                ))}
-              </select>
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setIsServiceOpen(!isServiceOpen)}
+                  className="w-full flex items-center justify-between bg-background border-2 border-border p-4 text-text hover:border-primary transition-colors"
+                >
+                  <span className="text-sm font-medium">{formData.service}</span>
+                  <i className={`fa-solid fa-chevron-${isServiceOpen ? 'up' : 'down'} text-xs`}></i>
+                </button>
+
+                {isServiceOpen && (
+                  <>
+                    <div 
+                      className="fixed inset-0 z-40" 
+                      onClick={() => setIsServiceOpen(false)}
+                    ></div>
+                    <div className="absolute top-full left-0 right-0 mt-2 w-full bg-background border-2 border-border z-50 shadow-lg">
+                      {serviceKeys.map((key) => (
+                        <button
+                          key={key}
+                          type="button"
+                          onClick={() => handleServiceSelect(key)}
+                          className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-surface transition-colors ${
+                            currentServiceKey === key ? 'bg-surface border-l-4 border-primary' : ''
+                          }`}
+                        >
+                          <span className="text-sm font-medium text-text">{t(`contact.services.${key}`)}</span>
+                          {currentServiceKey === key && (
+                            <i className="fa-solid fa-check ml-auto text-primary"></i>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-sm font-bold text-text uppercase tracking-wider">{t('contact.form.description')}</label>
