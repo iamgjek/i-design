@@ -173,5 +173,192 @@
         }
       ]
     }
+  },
+  "portfolio": {
+    "nav": {
+      "socialProof": "Highlights",
+      "projects": "Selected Projects",
+      "how": "How I Work",
+      "contact": "Contact Me",
+      "openMenu": "Open Menu"
+    },
+    "hero": {
+      "headlinePrefix": "Use technical insight and experience design to",
+      "headlineHighlight": "turn requirements into scalable products",
+      "subheadline": "I’m good at aligning business goals, user needs, and engineering risks—planning, designing, and pushing execution from 0 to 1.\nThen I iterate with data so the product keeps improving.\nYou’ll get a PM who can collaborate across PM / UI / Frontend and deliver on time under constraints.",
+      "primaryCta": "View Selected Projects",
+      "secondaryCta": "Contact Me (Email / 15-min chat)",
+      "worksTitle": "Works / Design Links",
+      "figmaLabel": "Figma",
+      "pinterestLabel": "Pinterest",
+      "worksHint": "Click the links to see the context and process behind the work.",
+      "quickProfileTitle": "The collaboration rhythm I bring",
+      "quickProfile": {
+        "1": "Tech-first alignment: surface risks early and convert plans into deliverable specs",
+        "2": "Validate with prototypes and journeys to keep a consistent execution cadence",
+        "3": "Use data to make discussions measurable (what to change and why)"
+      }
+    },
+    "socialProof": {
+      "title": "Highlights",
+      "items": {
+        "bankCompliance": "LegalTech on-premise services: drove POC validation with 2 banks and improved AML workflow efficiency by 40%; the product was ultimately acquired.",
+        "microservices": "Microservices enterprise solution: partnered with a 30+ person team to build a modular deployment plan; custom cycle time shortened by 25%.",
+        "crossBorderPayments": "Cross-border e-commerce payments: introduced a standalone card payment flow, increased AOV by 35%, and grew member count by 200% in 3 months.",
+        "securityGovernance": "Security risk governance: resolved DDoS / SQL injection crises, established a product security SOP, and reduced operational risk by 30%.",
+        "dataSaaS": "Data SaaS platform (VVIP): led optimization and search experience improvements; increased AOV by 60%.",
+        "callCenterIntegration": "Call center platform integration: integrated multi-dimensional information with real-time communication; reduced manual customer service cost by 30%."
+      }
+    },
+    "problem": {
+      "titlePrefix": "When your team is facing",
+      "titleHighlight": "execution and decision friction",
+      "subtitle": "You often don’t just need documents—you need someone who drives decisions and delivery:",
+      "items": {
+        "timelineRisk": "Schedules get pulled by requests, and risks are discovered late in the cycle.",
+        "validationLoop": "UI/UX and engineering don’t share a validation rhythm, causing repeated rework.",
+        "decisionByPower": "Cross-team alignment depends on “who decides,” making quality and delivery inconsistent.",
+        "safetyCompliance": "Security, compliance, or data integration issues lack practical governance SOPs."
+      }
+    },
+    "solution": {
+      "title": "The changes I can bring to your product",
+      "items": {
+        "techDriven": {
+          "title": "Tech-driven decision making",
+          "desc": "Move risks into planning early. I have an engineering background to predict hard parts, break down feasible paths, and reduce delivery/operations risk through process."
+        },
+        "uxIntuitive": {
+          "title": "Intuitive user experience validation",
+          "desc": "Validate first, then invest. I use wireframes, prototypes, User Journeys, and User Flows to test requirements quickly before full execution."
+        },
+        "dataDriven": {
+          "title": "Data-driven outcomes",
+          "desc": "Bring conversations back to measurable results. I use SQL / GA-style thinking to locate pain points and assumptions so changes are testable."
+        },
+        "crossFunctional": {
+          "title": "Cross-functional execution",
+          "desc": "PM / UI / Frontend move together. I collaborate in parallel with design and frontend, and I can step in to help deliver when resources are tight."
+        },
+        "aiPractical": {
+          "title": "Practical AI application",
+          "desc": "Turn AI into real output—not just concepts. Includes speech-to-text, AI validation + automatic report generation, and knowledge base generation to boost efficiency and product value."
+        }
+      }
+    },
+    "projects": {
+      "titlePrefix": "Selected",
+      "titleHighlight": "Projects",
+      "labels": {
+        "what": "What I did",
+        "outcome": "Key outcomes"
+      },
+      "items": {
+        "pes": {
+          "title": "PES Background Screening SaaS (enterprise onboarding + AI verification)",
+          "what": "Analyzed requirements and designed the product to build a background screening tool. Planned modules (education, experience, knowledge investigation, etc.) with complete user flows, and integrated speech-to-text with auto-generated reports.",
+          "outcome": "Accelerated data verification with AI, reducing manual review costs by 30%+; implemented RBAC permissions to support multi-role collaboration."
+        },
+        "complianceOnPrem": {
+          "title": "LegalTech on-premise services (validated by the market and moving toward acquisition)",
+          "what": "Designed KYC background screening and risk identification (PEPs / RCA / Sanction), and planned knowledge graph visualization plus a risk grading mechanism.",
+          "outcome": "Drove POC validation with 2 banks; improved AML workflow efficiency by 40%; the product was ultimately acquired."
+        },
+        "crossBorderPayment": {
+          "title": "Cross-border e-commerce payment redesign (innovative card payment flow)",
+          "what": "Led the development of card payment functionality, planned a two-stage payment flow, and integrated order management, logistics, and finance systems.",
+          "outcome": "Increased AOV by 35% and grew member count by 200% in 3 months; also introduced a standalone card payment flow."
+        },
+        "dataSaaSVVIP": {
+          "title": "Data SaaS platform (VVIP: improved search experience & data presentation)",
+          "what": "Optimized the search process, designed one-click search, and offered multi-dimensional criteria (city/region/block/usage areas).",
+          "outcome": "Increased AOV by 60%."
+        },
+        "callCenterPlatform": {
+          "title": "Call center platform integration (real-time comms + CRM workflows)",
+          "what": "Integrated multi-dimensional information, planned auto-dialing, data import, and case tracking; integrated WebSocket real-time communication to improve customer service efficiency.",
+          "outcome": "Reduced manual customer service cost by 30%."
+        }
+      }
+    },
+    "how": {
+      "titlePrefix": "My",
+      "titleHighlight": "working style",
+      "items": {
+        "agileDelivery": "Agile delivery: manage Scrum teams and track cadence with Jira/Trello, balancing quality and schedule.",
+        "alignFirst": "Align first, then break down: use User Journey / User Flow / wireframe / PRD to clarify what we’re solving.",
+        "feasibilityEval": "Feasibility evaluation: bring together tech, design, and business for an early assessment to reduce later rework and mismatch.",
+        "crossCountryCollab": "Cross-country collaboration: act as the overseas team window, drive consensus, and lock decisions into deliverable specs.",
+        "securityGovernance": "Security & compliance governance: include security SOPs, risk identification, and deployment requirements in the product design process."
+      }
+    },
+    "whyMe": {
+      "titlePrefix": "Why",
+      "titleHighlight": "work with me",
+      "subtitle": "I’m not just producing documents—I push alignment, validation, and delivery forward.",
+      "items": {
+        "alignmentDriver": "I position myself as a product execution driver who makes teams align faster—requirements, design, and engineering on the same direction.",
+        "tradeoffFramework": "I handle trade-offs in complex scenarios with data and a framework to reduce decision cost—not leave risks to the end.",
+        "handsOnDelivery": "I can help with delivery implementation when needed so the team keeps momentum."
+      }
+    },
+    "contact": {
+      "titlePrefix": "Let’s talk",
+      "titleHighlight": "product goals & delivery",
+      "message": "Want to discuss your product goals—or need a PM who can push plans all the way to launch? Feel free to contact me. Based on your current context, I can share a clear roadmap (including risk points and priorities).",
+      "emailLabel": "Email",
+      "emailValue": "iamgjek@gmail.com",
+      "phoneLabel": "Phone",
+      "phoneValue": "+886-988968172",
+      "locationLabel": "Location",
+      "locationValue": "Banqiao District, New Taipei City",
+      "ctaButton": "Send Email (15-min chat first)",
+      "backToProjects": "Back to Selected Projects"
+    },
+    "footer": {
+      "title": "Ready to align product teams faster?",
+      "titleHighlight": "Speed up delivery",
+      "titleSuffix": "",
+      "subtitle": "Email me: a 15-minute chat to clarify your goals and the priority of risks.",
+      "cta": "Contact Me",
+      "copyright": "All Rights Reserved."
+    }
+  },
+  "seoPortfolio": {
+    "title": "Ian Gjek - Product Manager | Selected Projects",
+    "description": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
+    "keywords": "Product Manager, PM, Product Strategy, UI/UX, Frontend Collaboration, Data-driven, Practical AI, SaaS, Compliance, Payments",
+    "ogTitle": "Ian Gjek - Product Manager | Selected Projects",
+    "ogDescription": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
+    "twitterTitle": "Ian Gjek - Product Manager | Selected Projects",
+    "twitterDescription": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
+    "jsonLd": {
+      "name": "Ian Gjek",
+      "description": "A tech-first product execution PM who validates with users, measures outcomes with data, and collaborates across PM/UI/Frontend to deliver.",
+      "serviceType": ["Product Management", "Product Strategy", "UX Validation", "Tech-driven Decision Making"],
+      "catalogName": "Product Management Services",
+      "services": [
+        {
+          "name": "Tech-driven decision making",
+          "description": "Bring risks into planning early, break down feasible paths, and reduce delivery/operations risk."
+        },
+        {
+          "name": "Intuitive UX validation",
+          "description": "Validate with prototypes and journeys before committing to full execution."
+        },
+        {
+          "name": "Data-driven outcomes",
+          "description": "Use SQL / GA-style thinking to locate assumptions and make changes testable."
+        },
+        {
+          "name": "Cross-functional execution",
+          "description": "Collaborate in parallel across PM/UI/Frontend to keep delivery cadence under constraints."
+        },
+        {
+          "name": "Practical AI application",
+          "description": "Turn AI into real outputs such as speech-to-text, verification, reports, and knowledge bases."
+        }
+      ]
+    }
   }
 }

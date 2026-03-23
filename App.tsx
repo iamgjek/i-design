@@ -9,21 +9,36 @@ import WhyUs from './components/WhyUs';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import PortfolioHeader from './components/PortfolioHeader';
+import PortfolioLanding from './components/PortfolioLanding';
+import PortfolioFooter from './components/PortfolioFooter';
 
 function App() {
+  const pathname =
+    typeof window !== 'undefined' ? window.location.pathname : '';
+  const isPortfolio = pathname.startsWith('/portfolio');
+
   return (
     <div className="min-h-screen bg-background text-text font-sans antialiased selection:bg-primary selection:text-background">
-      <SEO />
-      <Header />
-      <main>
-        <Hero />
-        <PainPoints />
-        <Services />
-        <WhyUs />
-        <Testimonials />
-        <ContactForm />
+      <SEO page={isPortfolio ? 'portfolio' : 'home'} />
+      {isPortfolio ? <PortfolioHeader /> : <Header />}
+
+      <main id="main">
+        {isPortfolio ? (
+          <PortfolioLanding />
+        ) : (
+          <>
+            <Hero />
+            <PainPoints />
+            <Services />
+            <WhyUs />
+            <Testimonials />
+            <ContactForm />
+          </>
+        )}
       </main>
-      <Footer />
+
+      {isPortfolio ? <PortfolioFooter /> : <Footer />}
     </div>
   );
 }

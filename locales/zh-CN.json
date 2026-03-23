@@ -173,5 +173,192 @@
         }
       ]
     }
+  },
+  "portfolio": {
+    "nav": {
+      "socialProof": "关键战绩",
+      "projects": "精选案例",
+      "how": "工作方式",
+      "contact": "联系我",
+      "openMenu": "打开菜单"
+    },
+    "hero": {
+      "headlinePrefix": "用技术洞察与体验设计，把需求落地成",
+      "headlineHighlight": "可持续增长的产品",
+      "subheadline": "我擅长把「商业目标、用户需求、工程风险」同步对齐：从 0 到 1 规划、设计、推进落地，再用数据持续迭代。\n你会得到一位能跨 PM / UI / Frontend 协作、并在资源限制下准时交付的产品经理。",
+      "primaryCta": "查看精选案例",
+      "secondaryCta": "联系我（Email / 15 分钟交流）",
+      "worksTitle": "作品/设计链接",
+      "figmaLabel": "Figma",
+      "pinterestLabel": "Pinterest",
+      "worksHint": "欢迎点击链接查看作品脉络与流程细节。",
+      "quickProfileTitle": "我能带来的协作节奏",
+      "quickProfile": {
+        "1": "技术洞察先对齐风险，再把规划推进到可交付的规格",
+        "2": "用原型与体验验证建立一致节奏，降低返工成本",
+        "3": "用数据让讨论回到可衡量的结果（改什么、为什么改）"
+      }
+    },
+    "socialProof": {
+      "title": "关键战绩",
+      "items": {
+        "bankCompliance": "法遵科技 on-premise 服务：成功推动 2 家银行 POC 验证，并将反洗钱流程效率提升 40%；产品最终被收购。",
+        "microservices": "微服务企业方案：协同 30+ 人团队建设模块化部署方案，定制周期缩短 25%。",
+        "crossBorderPayments": "跨境电商支付改版：首创信用卡独立支付流程，提升客单价 35%，并在 3 个月内会员数增长 200%。",
+        "securityGovernance": "资安风险治理：化解 DDoS / SQL 注入危机，建立产品资安 SOP，降低 30% 运营风险。",
+        "dataSaaS": "土开大数据 SaaS 平台（VVIP）：主导优化与搜索体验，客单价提升 60%。",
+        "callCenterIntegration": "Call center 平台整合方案：整合多维度信息与实时通讯，降低客服人工成本 30%。"
+      }
+    },
+    "problem": {
+      "titlePrefix": "当团队遇到以下状况",
+      "titleHighlight": "需要的是交付推进者",
+      "subtitle": "多半需要的不只是文档，而是能带动决策与交付的人：",
+      "items": {
+        "timelineRisk": "开发进度常被需求牵着走，直到后期才发现风险",
+        "validationLoop": "UI/UX 与工程方向缺乏一致的验证节奏，导致反复返工",
+        "decisionByPower": "跨部门沟通依赖「谁说了算」，结果质量与交付难以稳定",
+        "safetyCompliance": "面对安全、合规，或数据整合问题时，缺少可落地的治理 SOP"
+      }
+    },
+    "solution": {
+      "title": "我能为产品带来的改变",
+      "items": {
+        "techDriven": {
+          "title": "技术驱动决策",
+          "desc": "把风险提前变成规划的一部分：具工程背景，能预判开发难点、拆解可行路径，并用流程化方式降低运营与交付风险。"
+        },
+        "uxIntuitive": {
+          "title": "用户体验直觉",
+          "desc": "先验证，再投入：以 wireframe / prototype / User Journey / User Flow 为核心节奏，让需求在落地前就能被快速检验。"
+        },
+        "dataDriven": {
+          "title": "数据落地",
+          "desc": "让讨论回到可衡量的结果：善用 SQL / GA 等数据思维定位痛点与假设，让「改什么、为什么改」更可验证。"
+        },
+        "crossFunctional": {
+          "title": "跨职能整合",
+          "desc": "PM / UI / Frontend 一起推进：与设计与前端并行协作，必要时也能补位交付，让团队在资源不足时依然维持节奏。"
+        },
+        "aiPractical": {
+          "title": "AI 应用实践",
+          "desc": "把 AI 变成真实产出：包含语音通话转文字、AI 验证与自动生成报告、知识库生成等，提升效率并强化产品价值。"
+        }
+      }
+    },
+    "projects": {
+      "titlePrefix": "精选",
+      "titleHighlight": "案例",
+      "labels": {
+        "what": "我做了什么",
+        "outcome": "关键成果"
+      },
+      "items": {
+        "pes": {
+          "title": "PES 背景审查 SaaS 平台（企业级 onboarding + AI 验证）",
+          "what": "需求分析与产品设计，打造背景审查工具；规划基础审查/学历/经历/知识调查等模块与完整 User Flow；整合语音通话转文字与自动生成报告。",
+          "outcome": "利用 AI 加速资料验证，降低人工审核成本 30%+；并实现 RBAC 权限管理以支持多角色协作。"
+        },
+        "complianceOnPrem": {
+          "title": "法遵科技 on-premise 服务（合规产品被市场验证并走向收购）",
+          "what": "设计 KYC 背景审查与风险识别（PEPs / RCA / Sanction），并规划知识图谱可视化与风险评等机制。",
+          "outcome": "推动 2 家银行 POC 验证；反洗钱流程效率提升 40%；产品最终被收购。"
+        },
+        "crossBorderPayment": {
+          "title": "跨境电商支付改版（信用卡支付流程创新）",
+          "what": "主导信用卡支付功能开发，规划两阶段支付流程并整合订单管理、物流与财务系统。",
+          "outcome": "提升客单价 35%，并促成 3 个月会员数增长 200%；同时首创信用卡独立支付流程。"
+        },
+        "dataSaaSVVIP": {
+          "title": "土开大数据 SaaS 平台（VVIP：搜索体验与数据呈现优化）",
+          "what": "优化搜索流程，设计一键搜索并提供多维度条件（城市/行政区/段小段/使用分区）。",
+          "outcome": "客单价提升 60%。"
+        },
+        "callCenterPlatform": {
+          "title": "Call center 平台整合（实时通讯 + CRM 流程）",
+          "what": "整合多维度信息，规划自动外呼、数据导入与案件跟踪；整合 WebSocket 实时通讯提升客服效率。",
+          "outcome": "降低客服人工成本 30%。"
+        }
+      }
+    },
+    "how": {
+      "titlePrefix": "我的",
+      "titleHighlight": "工作方式",
+      "items": {
+        "agileDelivery": "敏捷推进：Scrum 团队管理、使用 Jira/Trello 追踪节奏，兼顾品质与进度",
+        "alignFirst": "先对齐，再拆解：用 User Journey / User Flow / wireframe / PRD 把「要解决什么」讲清楚",
+        "feasibilityEval": "需求可行性评估：导入技术/设计/商业三方初步评估，降低后续反复与误差",
+        "crossCountryCollab": "跨国沟通协作：担任海外团队窗口，推进共识并把决策落在可交付的规格",
+        "securityGovernance": "资安与合规治理：把安全 SOP、风险识别与部署要求纳入产品设计流程"
+      }
+    },
+    "whyMe": {
+      "titlePrefix": "为什么",
+      "titleHighlight": "想找我",
+      "subtitle": "我不是只做文档，而是把团队对齐、验证与交付往前推。",
+      "items": {
+        "alignmentDriver": "把自己定位成「能让团队更快对齐」的产品推进者：需求、设计、工程同一方向",
+        "tradeoffFramework": "在复杂场景中做取舍：用数据与框架降低决策成本，而不是把风险留到最后",
+        "handsOnDelivery": "不只做产品，也能把交付落在实作上：必要时能补位协助，让团队维持速度"
+      }
+    },
+    "contact": {
+      "titlePrefix": "准备好",
+      "titleHighlight": "聊聊合作/联络",
+      "message": "想聊聊你的产品目标，或需要一位能把规划推进到上线的 PM？欢迎联系我。我可以根据你当前的情境先给一份清楚的路线图（含风险点与优先顺序）。",
+      "emailLabel": "Email",
+      "emailValue": "iamgjek@gmail.com",
+      "phoneLabel": "Phone",
+      "phoneValue": "+886-988968172",
+      "locationLabel": "地点",
+      "locationValue": "新北市板桥区",
+      "ctaButton": "发送 Email（15 分钟先聊）",
+      "backToProjects": "回到精选案例"
+    },
+    "footer": {
+      "title": "准备好让产品更快对齐？",
+      "titleHighlight": "让交付按下加速键",
+      "titleSuffix": "！",
+      "subtitle": "Email 我：15 分钟先聊清楚你的目标与风险优先顺序。",
+      "cta": "立即联络",
+      "copyright": "All Rights Reserved."
+    }
+  },
+  "seoPortfolio": {
+    "title": "Ian Gjek - 产品经理 | 精选作品",
+    "description": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
+    "keywords": "产品经理, PM, 产品规划, UI/UX, 前端协作, 数据思维, AI 应用, SaaS, 合规, 电商支付",
+    "ogTitle": "Ian Gjek - 产品经理 | 精选作品",
+    "ogDescription": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
+    "twitterTitle": "Ian Gjek - 产品经理 | 精选作品",
+    "twitterDescription": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
+    "jsonLd": {
+      "name": "Ian Gjek",
+      "description": "工程背景的产品推进者，擅长风险先对齐、用户先验证、数据落地，并跨职能推进交付。",
+      "serviceType": ["产品管理", "产品策略", "用户体验验证", "技术驱动决策"],
+      "catalogName": "产品管理服务",
+      "services": [
+        {
+          "name": "技术驱动决策",
+          "description": "把风险提前纳入规划，拆解可行路径并降低交付与运营风险。"
+        },
+        {
+          "name": "用户体验直觉",
+          "description": "用原型与体验验证建立一致节奏，降低返工成本。"
+        },
+        {
+          "name": "数据落地",
+          "description": "善用 SQL / GA 思维定位假设，让改动可衡量可验证。"
+        },
+        {
+          "name": "跨职能整合",
+          "description": "协作 PM / UI / Frontend，资源不足时依然维持交付节奏。"
+        },
+        {
+          "name": "AI 应用实践",
+          "description": "把 AI 变成真实产出：从验证到自动生成报告与知识库。"
+        }
+      ]
+    }
   }
 }

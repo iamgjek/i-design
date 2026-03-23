@@ -1,12 +1,20 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const SEO: React.FC = () => {
+type SEOProps = {
+  page?: 'home' | 'portfolio';
+};
+
+const SEO: React.FC<SEOProps> = ({ page = 'home' }) => {
   const { i18n, t } = useTranslation();
 
   useEffect(() => {
+    const seoKey = page === 'portfolio' ? 'seoPortfolio' : 'seo';
+    const baseUrl = 'https://i-design.com';
+    const pagePath = page === 'portfolio' ? '/portfolio/' : '/';
+
     // 更新 document title
-    const title = t('seo.title');
+    const title = t(`${seoKey}.title`);
     if (title) {
       document.title = title;
     }
@@ -36,14 +44,14 @@ const SEO: React.FC = () => {
     htmlElement.setAttribute('lang', langMap[i18n.language] || 'zh-Hant');
 
     // 更新 Primary Meta Tags
-    updateMetaTag('title', t('seo.title'));
-    updateMetaTag('description', t('seo.description'));
-    updateMetaTag('keywords', t('seo.keywords'));
+    updateMetaTag('title', t(`${seoKey}.title`));
+    updateMetaTag('description', t(`${seoKey}.description`));
+    updateMetaTag('keywords', t(`${seoKey}.keywords`));
     updateMetaTag('language', langMap[i18n.language] || 'zh-Hant');
 
     // 更新 Open Graph Meta Tags
-    updateMetaTag('og:title', t('seo.ogTitle'), true);
-    updateMetaTag('og:description', t('seo.ogDescription'), true);
+    updateMetaTag('og:title', t(`${seoKey}.ogTitle`), true);
+    updateMetaTag('og:description', t(`${seoKey}.ogDescription`), true);
     
     const ogLocaleMap: { [key: string]: string } = {
       'zh-TW': 'zh_TW',
@@ -53,11 +61,11 @@ const SEO: React.FC = () => {
     updateMetaTag('og:locale', ogLocaleMap[i18n.language] || 'zh_TW', true);
 
     // 更新 Twitter Meta Tags
-    updateMetaTag('twitter:title', t('seo.twitterTitle'));
-    updateMetaTag('twitter:description', t('seo.twitterDescription'));
+    updateMetaTag('twitter:title', t(`${seoKey}.twitterTitle`));
+    updateMetaTag('twitter:description', t(`${seoKey}.twitterDescription`));
 
     // 更新 JSON-LD 結構化數據
-    const jsonLd = t('seo.jsonLd', { returnObjects: true }) as any;
+    const jsonLd = t(`${seoKey}.jsonLd`, { returnObjects: true }) as any;
     let jsonLdScript = document.querySelector('script[type="application/ld+json"]');
     
     if (!jsonLdScript) {
@@ -71,7 +79,7 @@ const SEO: React.FC = () => {
       '@type': 'ProfessionalService',
       name: jsonLd.name,
       description: jsonLd.description,
-      url: 'https://i-design.com/',
+      url: `${baseUrl}${pagePath}`,
       logo: 'https://i-design.com/logo.png',
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
       telephone: '',
@@ -109,9 +117,8 @@ const SEO: React.FC = () => {
       canonicalLink.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalLink);
     }
-    const baseUrl = 'https://i-design.com';
     // 所有語言版本都指向同一個 URL（因為這是 SPA）
-    canonicalLink.setAttribute('href', `${baseUrl}/`);
+    canonicalLink.setAttribute('href', `${baseUrl}${pagePath}`);
 
     // 更新 alternate hreflang 標籤
     // 對於 SPA，所有語言版本都使用同一個 URL，但標示不同的語言
@@ -131,7 +138,7 @@ const SEO: React.FC = () => {
         document.head.appendChild(hreflangLink);
       }
       // 所有語言版本都指向同一個 URL
-      hreflangLink.setAttribute('href', `${baseUrl}/`);
+      hreflangLink.setAttribute('href', `${baseUrl}${pagePath}`);
     });
 
     // 添加 x-default hreflang
@@ -142,9 +149,9 @@ const SEO: React.FC = () => {
       defaultHreflang.setAttribute('hreflang', 'x-default');
       document.head.appendChild(defaultHreflang);
     }
-    defaultHreflang.setAttribute('href', `${baseUrl}/`);
+    defaultHreflang.setAttribute('href', `${baseUrl}${pagePath}`);
 
-  }, [i18n.language, t]);
+  }, [i18n.language, t, page]);
 
   return null; // 此元件不渲染任何內容
 };
