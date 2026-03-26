@@ -139,7 +139,9 @@
     "titleSuffix": "了嗎？",
     "subtitle": "別再錯失潛在機遇。立即預約一次免費的專案諮詢，讓我們深入聆聽您的宏偉構想，共同開創無限可能。",
     "cta": "立即與我們聯繫，啟動專案",
-    "copyright": "All Rights Reserved."
+    "copyright": "All Rights Reserved.",
+    "homeLink": "首頁",
+    "portfolioLink": "關於我"
   },
   "seo": {
     "title": "i-design - 數位轉型專家 | 網頁設計、軟體開發、SEO 顧問",
@@ -253,29 +255,42 @@
         "what": "我做了什麼",
         "outcome": "關鍵成果"
       },
+      "actions": {
+        "viewCase": "查看案例"
+      },
       "items": {
         "pes": {
           "title": "PES 背景審查 SaaS 平台（企業級 onboarding + AI 驗證）",
+          "image": "https://cdn.undraw.co/illustration/authentication_1evl.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "需求分析與產品設計，打造背景審查工具；規劃基礎審查/學歷/經歷/知識調查等模組與完整 User Flow；整合語音通話轉文字與自動生成報告。",
           "outcome": "利用 AI 加速資料驗證，降低人工審核成本 30%+；並實作 RBAC 權限管理支援多角色協作。"
         },
         "complianceOnPrem": {
           "title": "法遵科技 on-premise 服務（合規產品被市場驗證並走向收購）",
+          "image": "https://cdn.undraw.co/illustration/personal-information_h7kf.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "設計 KYC 背景審查與風險識別（PEPs / RCA / Sanction），並規劃知識圖譜視覺化與風險評等機制。",
           "outcome": "推動 2 家銀行 POC 驗證；反洗錢流程效率提升 40%；產品最終被收購。"
         },
         "crossBorderPayment": {
           "title": "跨境電商支付改版（信用卡支付流程創新）",
+          "image": "https://cdn.undraw.co/illustration/pay-with-credit-card_77g6.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "主導信用卡支付功能開發，規劃兩階段支付流程並整合訂單管理、物流與財務系統。",
           "outcome": "提升客單價 35%，並促成 3 個月會員數成長 200%；同時首創信用卡獨立支付流程。"
         },
         "dataSaaSVVIP": {
           "title": "土開大數據 SaaS 平台（VVIP：搜尋體驗與資料呈現優化）",
+          "image": "https://cdn.undraw.co/illustrations/dashboard_p93p.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "優化搜尋流程，設計一鍵搜尋並提供多維度條件（縣市/行政區/段小段/使用分區）。",
           "outcome": "客單價提升 60%。"
         },
         "callCenterPlatform": {
           "title": "Call center 平台整合（即時通訊 + CRM 流程）",
+          "image": "https://cdn.undraw.co/illustrations/instant-support_oav0.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "整合多維度資訊，規劃自動外呼、資料導入與案件追蹤；整合 WebSocket 即時通訊提升客服效率。",
           "outcome": "降低客服人工成本 30%。"
         }
@@ -325,13 +340,13 @@
     }
   },
   "seoPortfolio": {
-    "title": "Ian Gjek - 產品經理 | 精選作品",
-    "description": "具工程背景的產品推進者，把商業目標、用戶需求與工程風險同步對齊，從 0 到 1 規劃、設計、推進實作，並用數據持續迭代。",
+    "title": "i-design - 關於我",
+    "description": "i-design｜關於我：具工程背景的產品推進者，擅長對齊商業目標、用戶需求與工程風險，從規劃到上線落地，並持續以數據優化成果。",
     "keywords": "產品經理, PM, 產品規劃, UI/UX, 前端協作, 數據思維, AI 應用, SaaS, 合規, 電商支付",
-    "ogTitle": "Ian Gjek - 產品經理 | 精選作品",
-    "ogDescription": "具工程背景的產品推進者，把商業目標、用戶需求與工程風險同步對齊，從 0 到 1 規劃、設計、推進實作，並用數據持續迭代。",
-    "twitterTitle": "Ian Gjek - 產品經理 | 精選作品",
-    "twitterDescription": "具工程背景的產品推進者，把商業目標、用戶需求與工程風險同步對齊，從 0 到 1 規劃、設計、推進實作，並用數據持續迭代。",
+    "ogTitle": "i-design - 關於我",
+    "ogDescription": "i-design｜關於我：具工程背景的產品推進者，擅長對齊商業目標、用戶需求與工程風險，從規劃到上線落地，並持續以數據優化成果。",
+    "twitterTitle": "i-design - 關於我",
+    "twitterDescription": "i-design｜關於我：具工程背景的產品推進者，擅長對齊商業目標、用戶需求與工程風險，從規劃到上線落地，並持續以數據優化成果。",
     "jsonLd": {
       "name": "Ian Gjek",
       "description": "具工程背景的產品推進者，擅長風險先對齊、用戶先驗證、數據落地，並跨職能推進交付。",

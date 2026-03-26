@@ -139,7 +139,9 @@
     "titleSuffix": "?",
     "subtitle": "Don't miss potential opportunities. Book a free project consultation now, let us deeply listen to your grand vision and create infinite possibilities together.",
     "cta": "Contact Us Now to Start Your Project",
-    "copyright": "All Rights Reserved."
+    "copyright": "All Rights Reserved.",
+    "homeLink": "Home",
+    "portfolioLink": "About Me"
   },
   "seo": {
     "title": "i-design - Digital Transformation Experts | Web Design, Software Development, SEO Consulting",
@@ -253,29 +255,42 @@
         "what": "What I did",
         "outcome": "Key outcomes"
       },
+      "actions": {
+        "viewCase": "View case"
+      },
       "items": {
         "pes": {
           "title": "PES Background Screening SaaS (enterprise onboarding + AI verification)",
+          "image": "https://cdn.undraw.co/illustration/authentication_1evl.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "Analyzed requirements and designed the product to build a background screening tool. Planned modules (education, experience, knowledge investigation, etc.) with complete user flows, and integrated speech-to-text with auto-generated reports.",
           "outcome": "Accelerated data verification with AI, reducing manual review costs by 30%+; implemented RBAC permissions to support multi-role collaboration."
         },
         "complianceOnPrem": {
           "title": "LegalTech on-premise services (validated by the market and moving toward acquisition)",
+          "image": "https://cdn.undraw.co/illustration/personal-information_h7kf.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "Designed KYC background screening and risk identification (PEPs / RCA / Sanction), and planned knowledge graph visualization plus a risk grading mechanism.",
           "outcome": "Drove POC validation with 2 banks; improved AML workflow efficiency by 40%; the product was ultimately acquired."
         },
         "crossBorderPayment": {
           "title": "Cross-border e-commerce payment redesign (innovative card payment flow)",
+          "image": "https://cdn.undraw.co/illustration/pay-with-credit-card_77g6.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "Led the development of card payment functionality, planned a two-stage payment flow, and integrated order management, logistics, and finance systems.",
           "outcome": "Increased AOV by 35% and grew member count by 200% in 3 months; also introduced a standalone card payment flow."
         },
         "dataSaaSVVIP": {
           "title": "Data SaaS platform (VVIP: improved search experience & data presentation)",
+          "image": "https://cdn.undraw.co/illustrations/dashboard_p93p.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "Optimized the search process, designed one-click search, and offered multi-dimensional criteria (city/region/block/usage areas).",
           "outcome": "Increased AOV by 60%."
         },
         "callCenterPlatform": {
           "title": "Call center platform integration (real-time comms + CRM workflows)",
+          "image": "https://cdn.undraw.co/illustrations/instant-support_oav0.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "Integrated multi-dimensional information, planned auto-dialing, data import, and case tracking; integrated WebSocket real-time communication to improve customer service efficiency.",
           "outcome": "Reduced manual customer service cost by 30%."
         }
@@ -325,13 +340,13 @@
     }
   },
   "seoPortfolio": {
-    "title": "Ian Gjek - Product Manager | Selected Projects",
-    "description": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
+    "title": "i-design - About Me",
+    "description": "i-design | About me: a product execution leader with an engineering background who aligns business goals, user needs, and engineering risks from planning to launch, then iterates with data.",
     "keywords": "Product Manager, PM, Product Strategy, UI/UX, Frontend Collaboration, Data-driven, Practical AI, SaaS, Compliance, Payments",
-    "ogTitle": "Ian Gjek - Product Manager | Selected Projects",
-    "ogDescription": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
-    "twitterTitle": "Ian Gjek - Product Manager | Selected Projects",
-    "twitterDescription": "Engineering background product execution. Align business goals, user needs, and engineering risks from 0 to 1 planning and design, then iterate with data for scalable outcomes.",
+    "ogTitle": "i-design - About Me",
+    "ogDescription": "i-design | About me: a product execution leader with an engineering background who aligns business goals, user needs, and engineering risks from planning to launch, then iterates with data.",
+    "twitterTitle": "i-design - About Me",
+    "twitterDescription": "i-design | About me: a product execution leader with an engineering background who aligns business goals, user needs, and engineering risks from planning to launch, then iterates with data.",
     "jsonLd": {
       "name": "Ian Gjek",
       "description": "A tech-first product execution PM who validates with users, measures outcomes with data, and collaborates across PM/UI/Frontend to deliver.",

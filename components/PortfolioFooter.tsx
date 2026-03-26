@@ -27,8 +27,10 @@ const PortfolioFooter: React.FC = () => {
           </a>
         </div>
 
-        <div className="mt-12 text-sm text-muted/30">
-          © {new Date().getFullYear()} Ian Gjek. {t('portfolio.footer.copyright')}
+        <div className="mt-12 border-t border-border/60 pt-6">
+          <div className="text-sm text-muted/70">
+            © {new Date().getFullYear()} i-design. {t('footer.copyright')}
+          </div>
         </div>
       </div>
     </section>

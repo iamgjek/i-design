@@ -27,8 +27,16 @@ const Footer: React.FC = () => {
             <i className="fa-solid fa-phone-alt text-xl text-primary"></i> <a href="tel:886-988968172" className="hover:text-primary transition-colors">0988-968172</a>
           </span> */}
         </div>
-        <div className="mt-12 text-sm text-muted/30">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-sm text-muted/70 sm:flex-row">
+          <div>
             © {new Date().getFullYear()} i-design. {t('footer.copyright')}
+          </div>
+          <a
+            href="/portfolio"
+            className="font-medium text-muted transition-colors hover:text-primary"
+          >
+            {t('footer.portfolioLink')}
+          </a>
         </div>
       </div>
     </section>

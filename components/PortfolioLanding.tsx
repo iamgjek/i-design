@@ -10,6 +10,49 @@ const socialProofKeys = [
   'callCenterIntegration',
 ] as const;
 
+const socialProofIcons: Record<(typeof socialProofKeys)[number], string> = {
+  bankCompliance: 'fa-scale-balanced',
+  microservices: 'fa-cubes',
+  crossBorderPayments: 'fa-credit-card',
+  securityGovernance: 'fa-shield-halved',
+  dataSaaS: 'fa-database',
+  callCenterIntegration: 'fa-headset',
+};
+
+type SocialProofVariant = 'business' | 'tech';
+
+// A/B style switch for Social Proof section:
+// 'business' = 商務穩重版, 'tech' = 科技感版
+const socialProofVariant: SocialProofVariant = 'business';
+
+const socialProofStyles: Record<
+  SocialProofVariant,
+  {
+    card: string;
+    iconWrap: string;
+    divider: string;
+    icon: string;
+    text: string;
+  }
+> = {
+  business: {
+    card: 'group h-full border border-border/80 bg-background/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-primary/70 hover:bg-background/55',
+    iconWrap:
+      'flex size-12 shrink-0 items-center justify-center rounded-xl border border-primary/50 bg-primary/10 text-primary shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] transition group-hover:border-primary group-hover:bg-primary/15',
+    divider: 'h-px flex-1 bg-border/70',
+    icon: 'w-5 text-center text-xl',
+    text: 'text-base leading-relaxed text-muted',
+  },
+  tech: {
+    card: 'group h-full border border-primary/40 bg-gradient-to-br from-background/80 via-surface/70 to-background/80 p-7 shadow-[0_0_0_1px_rgba(0,240,255,0.08)] transition duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_0_24px_rgba(0,240,255,0.18)]',
+    iconWrap:
+      'flex size-12 shrink-0 items-center justify-center rounded-xl border border-primary/70 bg-primary/15 text-primary shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08),0_0_16px_rgba(0,240,255,0.22)] transition group-hover:bg-primary/20',
+    divider: 'h-px flex-1 bg-gradient-to-r from-primary/60 to-transparent',
+    icon: 'w-5 text-center text-xl',
+    text: 'text-base leading-relaxed text-muted group-hover:text-text/95 transition-colors',
+  },
+};
+
 const solutionKeys = [
   'techDriven',
   'uxIntuitive',
@@ -38,6 +81,7 @@ const whyMeKeys = ['alignmentDriver', 'tradeoffFramework', 'handsOnDelivery'] as
 
 const PortfolioLanding: React.FC = () => {
   const { t } = useTranslation();
+  const currentSocialProofStyle = socialProofStyles[socialProofVariant];
 
   return (
     <>
@@ -150,17 +194,20 @@ const PortfolioLanding: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {socialProofKeys.map((key) => (
               <div
                 key={key}
-                className="group border-2 border-border bg-background/40 p-8 transition duration-300 hover:border-primary hover:-translate-y-1"
+                className={currentSocialProofStyle.card}
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex size-14 items-center justify-center border-2 border-primary bg-background text-primary">
-                    <i className="fa-solid fa-trophy text-2xl" aria-hidden="true"></i>
+                <div className="flex h-full flex-col">
+                  <div className="mb-5 flex items-center gap-3">
+                    <div className={currentSocialProofStyle.iconWrap}>
+                      <i className={`fa-solid ${socialProofIcons[key]} ${currentSocialProofStyle.icon}`} aria-hidden="true"></i>
+                    </div>
+                    <div className={currentSocialProofStyle.divider} />
                   </div>
-                  <p className="text-base leading-relaxed text-muted">{t(`portfolio.socialProof.items.${key}`)}</p>
+                  <p className={currentSocialProofStyle.text}>{t(`portfolio.socialProof.items.${key}`)}</p>
                 </div>
               </div>
             ))}
@@ -233,23 +280,56 @@ const PortfolioLanding: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-stretch">
             {projectKeys.map((key) => (
-              <div key={key} className="border-2 border-border bg-surface/40 p-10">
-                <h3 className="text-3xl font-bold leading-snug text-text">{t(`portfolio.projects.items.${key}.title`)}</h3>
+              <div key={key} className="border-2 border-border bg-surface/40 p-10 h-full flex flex-col">
+                <h3 className="min-h-[84px] text-3xl font-bold leading-snug text-text">{t(`portfolio.projects.items.${key}.title`)}</h3>
 
-                <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <div>
-                    <div className="text-sm font-bold uppercase tracking-widest text-muted">
-                      {t('portfolio.projects.labels.what')}
-                    </div>
-                    <p className="mt-2 text-base leading-relaxed text-muted">{t(`portfolio.projects.items.${key}.what`)}</p>
+                <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-12 items-stretch flex-1">
+                  <div className="md:col-span-4 flex flex-col h-full">
+                    <a
+                      href={t(`portfolio.projects.items.${key}.link`)}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${t(`portfolio.projects.items.${key}.title`)}：${t('portfolio.projects.actions.viewCase')}`}
+                      className="block overflow-hidden rounded-2xl bg-background/40 flex-1"
+                    >
+                      <div className="aspect-[16/10] w-full h-full min-h-[180px]">
+                        <img
+                          src={t(`portfolio.projects.items.${key}.image`)}
+                          alt={t(`portfolio.projects.items.${key}.title`)}
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                        />
+                      </div>
+                    </a>
+
+                    <a
+                      href={t(`portfolio.projects.items.${key}.link`)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-auto flex h-12 w-full items-center justify-center gap-3 rounded-xl border-2 border-secondary bg-background px-6 text-base font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.4)]"
+                    >
+                      <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                      {t('portfolio.projects.actions.viewCase')}
+                    </a>
                   </div>
-                  <div>
-                    <div className="text-sm font-bold uppercase tracking-widest text-muted">
-                      {t('portfolio.projects.labels.outcome')}
+
+                  <div className="md:col-span-8 flex flex-col h-full">
+                    <div className="grid grid-cols-1 gap-6">
+                      <div>
+                        <div className="text-sm font-bold uppercase tracking-widest text-muted">
+                          {t('portfolio.projects.labels.what')}
+                        </div>
+                        <p className="mt-2 text-base leading-relaxed text-muted">{t(`portfolio.projects.items.${key}.what`)}</p>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold uppercase tracking-widest text-muted">
+                          {t('portfolio.projects.labels.outcome')}
+                        </div>
+                        <p className="mt-2 text-base leading-relaxed text-muted">{t(`portfolio.projects.items.${key}.outcome`)}</p>
+                      </div>
                     </div>
-                    <p className="mt-2 text-base leading-relaxed text-muted">{t(`portfolio.projects.items.${key}.outcome`)}</p>
                   </div>
                 </div>
               </div>

@@ -139,7 +139,9 @@
     "titleSuffix": "了吗？",
     "subtitle": "别再错失潜在机遇。立即预约一次免费的项目咨询，让我们深入聆听您的宏伟构想，共同开创无限可能。",
     "cta": "立即与我们联系，启动项目",
-    "copyright": "All Rights Reserved."
+    "copyright": "All Rights Reserved.",
+    "homeLink": "首页",
+    "portfolioLink": "关于我"
   },
   "seo": {
     "title": "i-design - 数字化转型专家 | 网页设计、软件开发、SEO 顾问",
@@ -253,29 +255,42 @@
         "what": "我做了什么",
         "outcome": "关键成果"
       },
+      "actions": {
+        "viewCase": "查看案例"
+      },
       "items": {
         "pes": {
           "title": "PES 背景审查 SaaS 平台（企业级 onboarding + AI 验证）",
+          "image": "https://cdn.undraw.co/illustration/authentication_1evl.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "需求分析与产品设计，打造背景审查工具；规划基础审查/学历/经历/知识调查等模块与完整 User Flow；整合语音通话转文字与自动生成报告。",
           "outcome": "利用 AI 加速资料验证，降低人工审核成本 30%+；并实现 RBAC 权限管理以支持多角色协作。"
         },
         "complianceOnPrem": {
           "title": "法遵科技 on-premise 服务（合规产品被市场验证并走向收购）",
+          "image": "https://cdn.undraw.co/illustration/personal-information_h7kf.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "设计 KYC 背景审查与风险识别（PEPs / RCA / Sanction），并规划知识图谱可视化与风险评等机制。",
           "outcome": "推动 2 家银行 POC 验证；反洗钱流程效率提升 40%；产品最终被收购。"
         },
         "crossBorderPayment": {
           "title": "跨境电商支付改版（信用卡支付流程创新）",
+          "image": "https://cdn.undraw.co/illustration/pay-with-credit-card_77g6.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "主导信用卡支付功能开发，规划两阶段支付流程并整合订单管理、物流与财务系统。",
           "outcome": "提升客单价 35%，并促成 3 个月会员数增长 200%；同时首创信用卡独立支付流程。"
         },
         "dataSaaSVVIP": {
           "title": "土开大数据 SaaS 平台（VVIP：搜索体验与数据呈现优化）",
+          "image": "https://cdn.undraw.co/illustrations/dashboard_p93p.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "优化搜索流程，设计一键搜索并提供多维度条件（城市/行政区/段小段/使用分区）。",
           "outcome": "客单价提升 60%。"
         },
         "callCenterPlatform": {
           "title": "Call center 平台整合（实时通讯 + CRM 流程）",
+          "image": "https://cdn.undraw.co/illustrations/instant-support_oav0.svg",
+          "link": "https://bit.ly/4pyBFQJ",
           "what": "整合多维度信息，规划自动外呼、数据导入与案件跟踪；整合 WebSocket 实时通讯提升客服效率。",
           "outcome": "降低客服人工成本 30%。"
         }
@@ -325,13 +340,13 @@
     }
   },
   "seoPortfolio": {
-    "title": "Ian Gjek - 产品经理 | 精选作品",
-    "description": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
+    "title": "i-design - 关于我",
+    "description": "i-design｜关于我：工程背景的产品推进者，擅长对齐商业目标、用户需求与工程风险，从规划到上线落地，并持续用数据优化成果。",
     "keywords": "产品经理, PM, 产品规划, UI/UX, 前端协作, 数据思维, AI 应用, SaaS, 合规, 电商支付",
-    "ogTitle": "Ian Gjek - 产品经理 | 精选作品",
-    "ogDescription": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
-    "twitterTitle": "Ian Gjek - 产品经理 | 精选作品",
-    "twitterDescription": "工程背景的产品推进者，把商业目标、用户需求与工程风险同步对齐，从 0 到 1 规划、设计、推进落地，并用数据持续迭代。",
+    "ogTitle": "i-design - 关于我",
+    "ogDescription": "i-design｜关于我：工程背景的产品推进者，擅长对齐商业目标、用户需求与工程风险，从规划到上线落地，并持续用数据优化成果。",
+    "twitterTitle": "i-design - 关于我",
+    "twitterDescription": "i-design｜关于我：工程背景的产品推进者，擅长对齐商业目标、用户需求与工程风险，从规划到上线落地，并持续用数据优化成果。",
     "jsonLd": {
       "name": "Ian Gjek",
       "description": "工程背景的产品推进者，擅长风险先对齐、用户先验证、数据落地，并跨职能推进交付。",
