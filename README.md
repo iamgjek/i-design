@@ -1,49 +1,84 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# i-design Website
 
-# Run and deploy your AI Studio app
+i-design 官方網站與作品頁，使用 React + Vite 建置，並提供表單寄信 API（Resend）。
 
-This contains everything you need to run your app locally.
+## 專案重點
 
-View your app in AI Studio: https://ai.studio/apps/drive/1iUe4D60H0zatHU4ismASeY5162otDwfU
+- 雙頁面入口：
+  - 首頁：`/`
+  - Portfolio（關於我）：`/portfolio`
+- 多語系支援：`zh-TW` / `en` / `zh-CN`
+- SEO 動態更新：依目前頁面自動切換 title、description、OG、Twitter metadata
+- 聯絡表單整合 Resend（透過 `server/api.js`）
 
-## Run Locally
+## 技術棧
 
-**Prerequisites:**  Node.js
+- Frontend: React 19, Vite, TypeScript
+- i18n: i18next, react-i18next
+- Backend API: Express, CORS, dotenv
+- Email Service: Resend
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+## 快速開始
 
-2. 設置環境變數：
-   - 複製 `.env.example` 並創建 `.env` 檔案
-   - 到 [Resend](https://resend.com/api-keys) 取得您的 API Key
-   - 在 `.env` 檔案中設置 `RESEND_API_KEY=your_api_key_here`
+### 1) 安裝依賴
 
-3. 運行應用程式：
-   
-   **選項 1：同時運行前端和後端（推薦）**
-   ```bash
-   npm run dev:all
-   ```
-   
-   **選項 2：分別運行**
-   ```bash
-   # 終端機 1：運行前端
-   npm run dev
-   
-   # 終端機 2：運行 API 伺服器
-   npm run server
-   ```
+```bash
+npm install
+```
 
-4. 訪問應用程式：
-   - 前端：http://localhost:3000
-   - API 伺服器：http://localhost:3001
+### 2) 設定環境變數
 
-## 功能說明
+在專案根目錄建立 `.env`：
 
-- 預約表單會透過 Resend API 發送郵件到 `idesign.app2026@gmail.com`
-- 郵件包含客戶的姓名、電子郵件、諮詢服務和專案描述
-- 回覆郵件會直接發送到客戶的電子郵件地址
+```env
+RESEND_API_KEY=re_xxxxxxxxx
+PORT=3001
+VITE_API_URL=http://localhost:3001
+```
+
+> `RESEND_API_KEY` 可在 [Resend API Keys](https://resend.com/api-keys) 取得。
+
+### 3) 啟動專案
+
+**推薦：前後端一起啟動**
+
+```bash
+npm run dev:all
+```
+
+或分開啟動：
+
+```bash
+# terminal 1
+npm run dev
+
+# terminal 2
+npm run server
+```
+
+### 4) 本機網址
+
+- Frontend: `http://localhost:3000`
+- API Server: `http://localhost:3001`
+
+## 可用指令
+
+- `npm run dev`：啟動前端開發模式
+- `npm run server`：啟動 API 伺服器
+- `npm run dev:all`：同時啟動前端 + API
+- `npm run build`：打包生產版本
+- `npm run preview`：預覽 production build
+
+## 寄信功能說明
+
+- 表單會將姓名、Email、服務項目、專案描述送到 API
+- API 透過 Resend 寄信到 `idesign.app2026@gmail.com`
+- 若寄送失敗，請先檢查：
+  - `.env` 的 `RESEND_API_KEY`
+  - API 伺服器是否有啟動
+  - Resend 帳戶額度與設定
+
+## 相關文件
+
+- `SETUP.md`：Resend 與環境變數完整設定
+- `QUICKSTART.md`：常見連線錯誤快速排查
