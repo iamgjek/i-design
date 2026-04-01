@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-20 flex flex-col items-center gap-4 text-base text-muted sm:flex-row sm:justify-center sm:gap-10">
           {/* <span className="flex items-center gap-3">
-            <i className="fa-regular fa-envelope text-xl text-primary"></i> <a href="mailto:idesign.app2026@gmail.com" className="hover:text-primary transition-colors">idesign.app2026@gmail.com</a>
+            <i className="fa-regular fa-envelope text-xl text-primary"></i> <a href="mailto:service@i-design.app" className="hover:text-primary transition-colors">service@i-design.app</a>
           </span>
           <span className="hidden sm:inline text-muted">|</span>
           <span className="flex items-center gap-3">

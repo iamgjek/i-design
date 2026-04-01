@@ -55,7 +55,7 @@ npm run server
 1. 訪問 http://localhost:3000
 2. 填寫預約表單
 3. 提交表單
-4. 檢查 `idesign.app2026@gmail.com` 是否收到郵件
+4. 檢查 `service@i-design.app` 是否收到郵件
 
 ## 常見問題
 

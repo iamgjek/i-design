@@ -72,7 +72,7 @@ npm run server
 ## 寄信功能說明
 
 - 表單會將姓名、Email、服務項目、專案描述送到 API
-- API 透過 Resend 寄信到 `idesign.app2026@gmail.com`
+- API 透過 Resend 寄信到 `service@i-design.app`
 - 若寄送失敗，請先檢查：
   - `.env` 的 `RESEND_API_KEY`
   - API 伺服器是否有啟動

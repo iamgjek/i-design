@@ -397,7 +397,7 @@ const PortfolioLanding: React.FC = () => {
               <div className="border-2 border-border bg-background/40 p-6">
                 <div className="text-sm font-bold uppercase tracking-widest text-muted">{t('portfolio.contact.emailLabel')}</div>
                 <a
-                  href="mailto:iamgjek@gmail.com"
+                  href="mailto:ian.chiu@i-design.app"
                   className="mt-3 block text-lg font-bold text-text hover:text-primary transition-colors"
                 >
                   {t('portfolio.contact.emailValue')}
@@ -420,7 +420,7 @@ const PortfolioLanding: React.FC = () => {
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:iamgjek@gmail.com?subject=Portfolio%20Consultation"
+                href="mailto:ian.chiu@i-design.app?subject=Portfolio%20Consultation"
                 className="flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background"
               >
                 <i className="fa-solid fa-paper-plane mr-3"></i>

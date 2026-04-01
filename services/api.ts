@@ -1,7 +1,7 @@
 import { ContactFormData } from '../types';
 
 /**
- * 使用 Resend API 發送預約申請郵件到 idesign.app2026@gmail.com
+ * 使用 Resend API 發送預約申請郵件到 service@i-design.app
  */
 export const submitContactForm = async (data: ContactFormData): Promise<boolean> => {
   try {

@@ -54,7 +54,7 @@ npm run server
 
 1. 訪問 http://localhost:3000
 2. 填寫預約表單
-3. 提交表單後，郵件會發送到 `idesign.app2026@gmail.com`
+3. 提交表單後，郵件會發送到 `service@i-design.app`
 
 ## 注意事項
 

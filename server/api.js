@@ -28,10 +28,10 @@ router.post('/send-email', async (req, res) => {
       });
     }
 
-    // 發送郵件到 idesign.app2026@gmail.com
+    // 發送郵件到 service@i-design.app
     const { data, error } = await resend.emails.send({
       from: 'onboarding@resend.dev', // 您需要先在 Resend 驗證您的域名
-      to: 'idesign.app2026@gmail.com',
+      to: 'service@i-design.app',
       subject: `新的預約申請 - ${service}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 2px solid #00f0ff;">
