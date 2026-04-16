@@ -118,7 +118,7 @@ const PortfolioLanding: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#projects"
-                  className="group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]"
+                  className="theme-button-secondary group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]"
                 >
                   <i className="fa-solid fa-arrow-down mr-3 group-hover:translate-y-0.5 transition-transform"></i>
                   {t('portfolio.hero.primaryCta')}
@@ -126,7 +126,7 @@ const PortfolioLanding: React.FC = () => {
 
                 <a
                   href="#contact"
-                  className="group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-primary px-8 text-xl font-bold text-primary transition hover:bg-primary hover:text-background"
+                  className="theme-button-primary group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-primary px-8 text-xl font-bold text-primary transition hover:bg-primary hover:text-background"
                 >
                   <i className="fa-solid fa-envelope mr-3 group-hover:-translate-y-0.5 transition-transform"></i>
                   {t('portfolio.hero.secondaryCta')}
@@ -136,7 +136,7 @@ const PortfolioLanding: React.FC = () => {
 
             {/* Works */}
             <div className="flex flex-col gap-6">
-              <div className="border-2 border-border bg-background/40 p-8">
+              <div className="theme-card border-2 border-border bg-background/40 p-8">
                 <div className="flex items-center justify-between gap-4">
                   <h2 className="text-2xl font-bold text-text">{t('portfolio.hero.worksTitle')}</h2>
                   <i className="fa-solid fa-link text-primary text-2xl" aria-hidden="true"></i>
@@ -147,7 +147,7 @@ const PortfolioLanding: React.FC = () => {
                     href="https://bit.ly/4pyBFQJ"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between gap-3 border-2 border-border bg-background p-5 transition hover:border-primary"
+                    className="theme-card theme-card-interactive flex items-center justify-between gap-3 border-2 border-border bg-background p-5 transition hover:border-primary"
                   >
                     <span className="text-base font-bold text-text">
                       {t('portfolio.hero.figmaLabel')}
@@ -158,7 +158,7 @@ const PortfolioLanding: React.FC = () => {
                     href="https://bit.ly/4nyntpZ"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between gap-3 border-2 border-border bg-background p-5 transition hover:border-primary"
+                    className="theme-card theme-card-interactive flex items-center justify-between gap-3 border-2 border-border bg-background p-5 transition hover:border-primary"
                   >
                     <span className="text-base font-bold text-text">
                       {t('portfolio.hero.pinterestLabel')}
@@ -172,7 +172,7 @@ const PortfolioLanding: React.FC = () => {
                 </p>
               </div>
 
-              <div className="border-2 border-border bg-surface/40 p-8">
+              <div className="theme-card border-2 border-border bg-surface/40 p-8">
                 <h3 className="text-2xl font-bold text-text">{t('portfolio.hero.quickProfileTitle')}</h3>
                 <ul className="mt-4 space-y-3 text-base text-muted list-disc pl-5 marker:text-primary">
                   <li>{t('portfolio.hero.quickProfile.1')}</li>
@@ -198,7 +198,7 @@ const PortfolioLanding: React.FC = () => {
             {socialProofKeys.map((key) => (
               <div
                 key={key}
-                className={currentSocialProofStyle.card}
+                className={`theme-card theme-card-interactive ${currentSocialProofStyle.card}`}
               >
                 <div className="flex h-full flex-col">
                   <div className="mb-5 flex items-center gap-3">
@@ -226,7 +226,7 @@ const PortfolioLanding: React.FC = () => {
               <p className="text-xl text-muted leading-relaxed">{t('portfolio.problem.subtitle')}</p>
             </div>
 
-            <div className="border-2 border-border bg-surface/40 p-8">
+            <div className="theme-card border-2 border-border bg-surface/40 p-8">
               <ul className="space-y-4 text-base text-muted list-disc pl-5 marker:text-secondary">
                 {problemKeys.map((key) => (
                   <li key={key}>{t(`portfolio.problem.items.${key}`)}</li>
@@ -250,7 +250,7 @@ const PortfolioLanding: React.FC = () => {
             {solutionKeys.map((key, idx) => (
               <div
                 key={key}
-                className="border-2 border-border bg-background/40 p-8 transition duration-300 hover:border-primary"
+                className="theme-card theme-card-interactive border-2 border-border bg-background/40 p-8 transition duration-300 hover:border-primary"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex size-14 items-center justify-center border-2 border-secondary bg-background text-secondary">
@@ -282,7 +282,7 @@ const PortfolioLanding: React.FC = () => {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-stretch">
             {projectKeys.map((key) => (
-              <div key={key} className="border-2 border-border bg-surface/40 p-10 h-full flex flex-col">
+              <div key={key} className="theme-card border-2 border-border bg-surface/40 p-10 h-full flex flex-col">
                 <h3 className="min-h-[84px] text-3xl font-bold leading-snug text-text">{t(`portfolio.projects.items.${key}.title`)}</h3>
 
                 <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-12 items-stretch flex-1">
@@ -308,7 +308,7 @@ const PortfolioLanding: React.FC = () => {
                       href={t(`portfolio.projects.items.${key}.link`)}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-auto flex h-12 w-full items-center justify-center gap-3 rounded-xl border-2 border-secondary bg-background px-6 text-base font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.4)]"
+                      className="theme-button-secondary mt-auto flex h-12 w-full items-center justify-center gap-3 rounded-xl border-2 border-secondary bg-background px-6 text-base font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.4)]"
                     >
                       <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                       {t('portfolio.projects.actions.viewCase')}
@@ -349,7 +349,7 @@ const PortfolioLanding: React.FC = () => {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {howKeys.map((key, idx) => (
-              <div key={key} className="border-2 border-border bg-background/40 p-8">
+              <div key={key} className="theme-card border-2 border-border bg-background/40 p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex size-14 items-center justify-center border-2 border-primary text-primary bg-background">
                     <span className="text-2xl font-extrabold">{idx + 1}</span>
@@ -373,7 +373,7 @@ const PortfolioLanding: React.FC = () => {
               <p className="text-xl text-muted leading-relaxed">{t('portfolio.whyMe.subtitle')}</p>
             </div>
 
-            <div className="border-2 border-border bg-surface/40 p-8">
+            <div className="theme-card border-2 border-border bg-surface/40 p-8">
               <ul className="space-y-4 text-base text-muted list-disc pl-5 marker:text-primary">
                 {whyMeKeys.map((key) => (
                   <li key={key}>{t(`portfolio.whyMe.items.${key}`)}</li>
@@ -394,7 +394,7 @@ const PortfolioLanding: React.FC = () => {
             <p className="mt-6 text-xl text-muted leading-relaxed">{t('portfolio.contact.message')}</p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-              <div className="border-2 border-border bg-background/40 p-6">
+              <div className="theme-card border-2 border-border bg-background/40 p-6">
                 <div className="text-sm font-bold uppercase tracking-widest text-muted">{t('portfolio.contact.emailLabel')}</div>
                 <a
                   href="mailto:ian.chiu@i-design.app"
@@ -403,7 +403,7 @@ const PortfolioLanding: React.FC = () => {
                   {t('portfolio.contact.emailValue')}
                 </a>
               </div>
-              <div className="border-2 border-border bg-background/40 p-6">
+              <div className="theme-card border-2 border-border bg-background/40 p-6">
                 <div className="text-sm font-bold uppercase tracking-widest text-muted">{t('portfolio.contact.phoneLabel')}</div>
                 <a
                   href="tel:+886988968172"
@@ -412,7 +412,7 @@ const PortfolioLanding: React.FC = () => {
                   {t('portfolio.contact.phoneValue')}
                 </a>
               </div>
-              <div className="border-2 border-border bg-background/40 p-6">
+              <div className="theme-card border-2 border-border bg-background/40 p-6">
                 <div className="text-sm font-bold uppercase tracking-widest text-muted">{t('portfolio.contact.locationLabel')}</div>
                 <div className="mt-3 text-lg font-bold text-text">{t('portfolio.contact.locationValue')}</div>
               </div>
@@ -421,7 +421,7 @@ const PortfolioLanding: React.FC = () => {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="mailto:ian.chiu@i-design.app?subject=Portfolio%20Consultation"
-                className="flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background"
+                className="theme-button-secondary flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background"
               >
                 <i className="fa-solid fa-paper-plane mr-3"></i>
                 {t('portfolio.contact.ctaButton')}
@@ -429,7 +429,7 @@ const PortfolioLanding: React.FC = () => {
 
               <a
                 href="#projects"
-                className="flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-border bg-background px-8 text-xl font-bold text-text transition hover:border-primary"
+                className="theme-button-ghost flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-border bg-background px-8 text-xl font-bold text-text transition hover:border-primary"
               >
                 <i className="fa-solid fa-arrow-left mr-3"></i>
                 {t('portfolio.contact.backToProjects')}

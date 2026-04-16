@@ -4,7 +4,15 @@
     "whyUs": "我们的承诺",
     "cases": "精选案例",
     "contact": "预约咨询",
-    "switchLanguage": "切换语言"
+    "switchLanguage": "切换语言",
+    "switchTheme": "切换主题",
+    "themeLabel": "主题",
+    "languageLabel": "语言"
+  },
+  "theme": {
+    "dark": "深色",
+    "light": "浅色",
+    "industrial": "工业"
   },
   "hero": {
     "title": "将您的愿景",

@@ -4,7 +4,15 @@
     "whyUs": "Why Us",
     "cases": "Cases",
     "contact": "Book Consultation",
-    "switchLanguage": "Switch Language"
+    "switchLanguage": "Switch Language",
+    "switchTheme": "Switch Theme",
+    "themeLabel": "Theme",
+    "languageLabel": "Language"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "industrial": "Industrial"
   },
   "hero": {
     "title": "Transform Your Vision ",

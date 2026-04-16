@@ -48,9 +48,9 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-surface py-24 border-b-2 border-border">
+    <section id="contact" className="theme-home-section theme-contact bg-surface py-24 border-b-2 border-border">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-16 text-center">
+        <div className="theme-contact-heading mb-16 text-center">
           <h2 className="text-3xl font-bold leading-snug text-text sm:text-4xl">
             {t('contact.title')}<span className="text-primary">{t('contact.titleHighlight')}</span>
           </h2>
@@ -58,19 +58,19 @@ const ContactForm: React.FC = () => {
         </div>
 
         {status === FormStatus.SUCCESS ? (
-           <div className="mx-auto max-w-2xl border-2 border-primary bg-background/50 p-10 text-center">
+           <div className="theme-contact-success theme-card mx-auto max-w-2xl border-2 border-primary bg-background/50 p-10 text-center">
               <i className="fa-solid fa-check-circle text-6xl text-primary mb-6"></i>
               <h3 className="text-2xl font-bold text-text mb-4">{t('contact.form.success.title')}</h3>
               <p className="text-muted">{t('contact.form.success.message')}</p>
               <button 
                 onClick={() => setStatus(FormStatus.IDLE)}
-                className="mt-8 border-2 border-border px-6 py-2 text-text hover:border-primary hover:text-primary transition"
+                className="theme-button-ghost mt-8 border-2 border-border px-6 py-2 text-text hover:border-primary hover:text-primary transition"
               >
                 {t('contact.form.success.newMessage')}
               </button>
            </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mx-auto max-w-2xl space-y-8">
+          <form onSubmit={handleSubmit} className="theme-contact-form mx-auto max-w-2xl space-y-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-bold text-text uppercase tracking-wider">{t('contact.form.name')}</label>
@@ -79,7 +79,7 @@ const ContactForm: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
+                  className="theme-input w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
                   placeholder={t('contact.form.namePlaceholder')} 
                   type="text" 
                 />
@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
+                  className="theme-input w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
                   placeholder={t('contact.form.emailPlaceholder')} 
                   type="email" 
                 />
@@ -103,7 +103,7 @@ const ContactForm: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsServiceOpen(!isServiceOpen)}
-                  className="w-full flex items-center justify-between bg-background border-2 border-border p-4 text-text hover:border-primary transition-colors"
+                  className="theme-input theme-select-trigger w-full flex items-center justify-between bg-background border-2 border-border p-4 text-text hover:border-primary transition-colors"
                 >
                   <span className="text-sm font-medium">{formData.service}</span>
                   <i className={`fa-solid fa-chevron-${isServiceOpen ? 'up' : 'down'} text-xs`}></i>
@@ -115,13 +115,13 @@ const ContactForm: React.FC = () => {
                       className="fixed inset-0 z-40" 
                       onClick={() => setIsServiceOpen(false)}
                     ></div>
-                    <div className="absolute top-full left-0 right-0 mt-2 w-full bg-background border-2 border-border z-50 shadow-lg">
+                    <div className="theme-dropdown absolute top-full left-0 right-0 mt-2 w-full bg-background border-2 border-border z-50 shadow-lg">
                       {serviceKeys.map((key) => (
                         <button
                           key={key}
                           type="button"
                           onClick={() => handleServiceSelect(key)}
-                          className={`w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-surface transition-colors ${
+                          className={`theme-dropdown-item w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-surface transition-colors ${
                             currentServiceKey === key ? 'bg-surface border-l-4 border-primary' : ''
                           }`}
                         >
@@ -143,14 +143,14 @@ const ContactForm: React.FC = () => {
                 value={formData.description}
                 onChange={handleChange}
                 required
-                className="w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
+                className="theme-input w-full bg-background border-2 border-border p-4 text-text focus:border-primary focus:ring-0 rounded-none placeholder-muted/50 outline-none transition-colors" 
                 placeholder={t('contact.form.descriptionPlaceholder')} 
                 rows={4}
               ></textarea>
             </div>
             
             {status === FormStatus.ERROR && (
-              <div className="border-2 border-secondary bg-background/50 p-6 text-secondary">
+              <div className="theme-card border-2 border-secondary bg-background/50 p-6 text-secondary">
                 <div className="font-bold text-lg mb-2">
                   <i className="fa-solid fa-exclamation-triangle mr-2"></i>
                   {t('contact.form.error.title')}
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
             <button 
               type="submit"
               disabled={status === FormStatus.SUBMITTING}
-              className="w-full border-2 border-primary bg-primary py-4 text-lg font-bold text-background transition hover:bg-transparent hover:text-primary uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
+              className="theme-button-primary w-full border-2 border-primary bg-primary py-4 text-lg font-bold text-background transition hover:bg-transparent hover:text-primary uppercase tracking-widest disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === FormStatus.SUBMITTING ? t('contact.form.submitting') : t('contact.form.submit')}
             </button>

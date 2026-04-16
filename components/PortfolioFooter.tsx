@@ -20,7 +20,7 @@ const PortfolioFooter: React.FC = () => {
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
           <a
             href="mailto:ian.chiu@i-design.app?subject=Portfolio%20Consultation"
-            className="border-2 border-secondary px-10 py-5 text-xl font-bold text-secondary shadow-none transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]"
+            className="theme-button-secondary border-2 border-secondary px-10 py-5 text-xl font-bold text-secondary shadow-none transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]"
           >
             <i className="fa-solid fa-envelope mr-3"></i>
             {t('portfolio.footer.cta')}

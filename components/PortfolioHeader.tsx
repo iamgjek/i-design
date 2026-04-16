@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const PortfolioHeader: React.FC = () => {
   const { t } = useTranslation();
@@ -43,15 +44,18 @@ const PortfolioHeader: React.FC = () => {
           </a>
         </nav>
 
-        {/* Language Switcher & CTA Button */}
-        <div className="hidden md:flex items-center gap-4 justify-end">
+        {/* Theme Switcher, Language Switcher & CTA Button */}
+        <div className="theme-header-actions hidden md:flex items-center justify-end">
           <a
             href="#contact"
-            className="flex h-12 cursor-pointer items-center justify-center border-2 border-primary px-6 text-base font-bold text-primary transition hover:bg-primary hover:text-background"
+            className="theme-button-primary theme-header-cta flex h-12 cursor-pointer items-center justify-center border-2 border-primary px-6 text-base font-bold text-primary transition hover:bg-primary hover:text-background"
           >
             {t('portfolio.nav.contact')}
           </a>
-          <LanguageSwitcher />
+          <div className="theme-control-cluster flex items-center gap-2">
+            <ThemeSwitcher />
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,10 +95,11 @@ const PortfolioHeader: React.FC = () => {
           <a
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold"
+            className="theme-button-primary mt-4 flex h-12 items-center justify-center border-2 border-primary text-primary font-bold"
           >
             {t('portfolio.nav.contact')}
           </a>
+          <ThemeSwitcher />
           <div className="mt-2">
             <LanguageSwitcher />
           </div>

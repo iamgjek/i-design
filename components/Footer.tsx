@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-background py-24">
+    <section className="theme-home-footer bg-background py-24">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8 text-center">
         <h2 className="mb-10 text-4xl font-bold tracking-tight leading-snug text-text sm:text-5xl">
           {t('footer.title')}<span className="text-primary">{t('footer.titleHighlight')}</span>{t('footer.titleSuffix')}
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           {t('footer.subtitle')}
         </p>
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-          <a href="#contact" className="border-2 border-secondary px-10 py-5 text-xl font-bold text-secondary shadow-none transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">
+          <a href="#contact" className="theme-button-secondary border-2 border-secondary px-10 py-5 text-xl font-bold text-secondary shadow-none transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">
             <i className="fa-solid fa-arrow-up-right-from-square mr-3"></i> {t('footer.cta')}
           </a>
         </div>

@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative overflow-hidden py-24 lg:py-40 border-b-2 border-border">
+    <section className="theme-home-hero relative overflow-hidden py-24 lg:py-40 border-b-2 border-border">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 opacity-30" 
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
-          <div className="flex flex-1 flex-col gap-8 text-center lg:text-left">
+          <div className="theme-home-hero-content flex flex-1 flex-col gap-8 text-center lg:text-left">
             <h1 className="text-5xl font-extrabold leading-[64px] lg:leading-[92px] tracking-tight text-text sm:text-6xl lg:text-7xl">
               {t('hero.title')}<br className="hidden lg:block" />
               <span className="text-primary">{t('hero.titleHighlight')}</span>
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               ))}
             </p>
             <div className="flex justify-center lg:justify-start">
-              <a href="#contact" className="group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">
+              <a href="#contact" className="theme-button-secondary group flex h-16 min-w-[280px] cursor-pointer items-center justify-center border-2 border-secondary px-8 text-xl font-bold text-secondary transition hover:bg-secondary hover:text-background hover:shadow-[0_0_20px_rgba(255,0,102,0.5)]">
                 <i className="fa-solid fa-arrow-right mr-3 group-hover:translate-x-1 transition-transform"></i> 
                 {t('hero.cta')}
               </a>

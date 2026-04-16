@@ -4,7 +4,15 @@
     "whyUs": "我們的承諾",
     "cases": "精選案例",
     "contact": "預約諮詢",
-    "switchLanguage": "切換語言"
+    "switchLanguage": "切換語言",
+    "switchTheme": "切換主題",
+    "themeLabel": "主題",
+    "languageLabel": "語系"
+  },
+  "theme": {
+    "dark": "深色",
+    "light": "淺色",
+    "industrial": "工業"
   },
   "hero": {
     "title": "將您的願景",

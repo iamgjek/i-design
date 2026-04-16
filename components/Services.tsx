@@ -13,16 +13,16 @@ const Services: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="services" className="bg-background py-24 border-b-2 border-border">
+    <section id="services" className="theme-home-section theme-home-services bg-background py-24 border-b-2 border-border">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-20 text-center">
+        <div className="theme-home-section-intro mb-20 text-center">
           <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-snug text-text sm:text-5xl" style={{ lineHeight: '58px' }}>
             {t('services.title')}<span className="text-secondary">{t('services.titleHighlight')}</span><br/>{t('services.titleSuffix')}
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {serviceKeys.map((key, index) => (
-            <div key={key} className="group flex flex-col gap-8 border-2 border-border bg-surface p-10 transition duration-300 hover:border-primary">
+            <div key={key} className="theme-card theme-card-interactive group flex flex-col gap-8 border-2 border-border bg-surface p-10 transition duration-300 hover:border-primary">
               <div className="flex size-16 items-center justify-center border-2 border-primary bg-background text-primary transition-colors group-hover:bg-primary group-hover:text-background">
                 <i className={`fa-solid ${serviceIcons[index]} text-3xl`}></i>
               </div>
