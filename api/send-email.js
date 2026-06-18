@@ -1,9 +1,28 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+  return new Resend(apiKey);
+}
 
 export async function POST(request) {
   try {
+    const resend = getResendClient();
+    if (!resend) {
+      console.error('RESEND_API_KEY 未設定');
+      return Response.json(
+        {
+          error: '郵件服務尚未設定',
+          details: 'RESEND_API_KEY is not configured on the server',
+          success: false,
+        },
+        { status: 503 }
+      );
+    }
+
     const { name, email, service, description } = await request.json();
 
     if (!name || !email || !service || !description) {
@@ -14,8 +33,8 @@ export async function POST(request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'service@i-design.app',
+      from: process.env.RESEND_FROM_EMAIL || 'i-design <onboarding@resend.dev>',
+      to: process.env.RESEND_TO_EMAIL || 'service@i-design.app',
       subject: `新的預約申請 - ${service}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 2px solid #00f0ff;">

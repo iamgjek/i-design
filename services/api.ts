@@ -26,18 +26,27 @@ export const submitContactForm = async (data: ContactFormData): Promise<boolean>
       throw fetchError;
     }
 
-    // 處理 HTTP 錯誤
+    const responseText = await response.text();
+
     if (!response.ok) {
-      // 嘗試解析錯誤訊息
+      let message = '';
       try {
-        const errorResult = await response.json();
-        throw new Error(errorResult.error || `HTTP ${response.status}: ${response.statusText}`);
+        const errorResult = JSON.parse(responseText);
+        message = errorResult.error || errorResult.details || '';
       } catch {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        // Vercel 等平台有時回傳純文字錯誤頁
       }
+
+      if (!message) {
+        message = import.meta.env.DEV
+          ? `HTTP ${response.status}: ${response.statusText || '請求失敗'}\n\n請確保已運行 API 伺服器：\n1. 運行 npm run dev:all\n2. 或分別運行 npm run dev 和 npm run server`
+          : '表單提交失敗，請稍後再試或直接來信 service@i-design.app';
+      }
+
+      throw new Error(message);
     }
 
-    const result = await response.json();
+    const result = JSON.parse(responseText);
 
     if (!result.success) {
       throw new Error(result.error || '郵件發送失敗');
