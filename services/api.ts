@@ -5,8 +5,8 @@ import { ContactFormData } from '../types';
  */
 export const submitContactForm = async (data: ContactFormData): Promise<boolean> => {
   try {
-    // 開發環境使用 Vite proxy（/api），生產環境使用完整 URL
-    const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '' : 'http://localhost:3001');
+    // 開發環境走 Vite proxy；Vercel 生產環境走同網域 /api
+    const apiUrl = import.meta.env.VITE_API_URL ?? '';
     
     let response: Response;
     try {
